@@ -8,7 +8,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock>Is it working?</TextBlock>
-    </StackPanel>
+    <Grid>
+        <NavigationView PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView">
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content="Ajout"/>
+                <NavigationViewItem Content="Propriétaire" x:Name="addProprio" Icon="AddFriend"/>
+                <NavigationViewItem Content="Maison" x:Name="addMaison" Icon="Home"/>
+                <NavigationViewItemSeparator />
+                <NavigationViewItemHeader Content="Affichage"/>
+                <NavigationViewItem Content="Propriétaires" x:Name="showProprio" Icon="People"/>
+                <NavigationViewItem Content="Maisons" x:Name="showMaison" Icon="Street"/>
+            </NavigationView.MenuItems>
+            <Frame x:Name="mainFrame"/>
+        </NavigationView>
+    </Grid>
 </Window>
