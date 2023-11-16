@@ -26,6 +26,28 @@ namespace projetFinal
         public MainWindow()
         {
             this.InitializeComponent();
+            mainFrame.Navigate(typeof(Clients));
+        }
+
+        private void navView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            var item = (NavigationViewItem)args.SelectedItem;
+
+            switch (item.Name)
+            {
+                case "navEmployes":
+                    mainFrame.Navigate(typeof(Employes));
+                    break;
+                case "navClients":
+                    mainFrame.Navigate(typeof(Clients));
+                    break;
+                case "navProjets":
+                    mainFrame.Navigate(typeof(Projets));
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

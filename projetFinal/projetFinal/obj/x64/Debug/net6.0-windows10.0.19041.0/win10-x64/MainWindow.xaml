@@ -9,16 +9,15 @@
     mc:Ignorable="d">
 
     <Grid>
-        <NavigationView x:ConnectionId='2' PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView">
+        <NavigationView x:ConnectionId='2' PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView"                                            >
             <NavigationView.MenuItems>
-                <NavigationViewItemHeader Content="Ajout"/>
-                <NavigationViewItem x:ConnectionId='3' Content="Propriétaire" x:Name="addProprio" Icon="AddFriend"/>
-                <NavigationViewItem x:ConnectionId='4' Content="Maison" x:Name="addMaison" Icon="Home"/>
-                <NavigationViewItemSeparator />
-                <NavigationViewItemHeader Content="Affichage"/>
-                <NavigationViewItem x:ConnectionId='5' Content="Propriétaires" x:Name="showProprio" Icon="People"/>
-                <NavigationViewItem x:ConnectionId='6' Content="Maisons" x:Name="showMaison" Icon="Street"/>
+                <NavigationViewItem x:ConnectionId='3' Content="Employés" x:Name="navEmployes" Icon="People"/>
+                <NavigationViewItem x:ConnectionId='4' Content="Clients" x:Name="navClients" Icon="Shop"/>
+                <NavigationViewItem x:ConnectionId='5' Content="Projets" x:Name="navProjets" Icon="Library"/>
             </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem x:ConnectionId='6' Content="Déconnection" x:Name="navDeconnection" Icon="Permissions"/>
+            </NavigationView.FooterMenuItems>
             <Frame x:ConnectionId='7' x:Name="mainFrame"/>
         </NavigationView>
     </Grid>
