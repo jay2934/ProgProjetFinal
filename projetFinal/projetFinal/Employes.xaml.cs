@@ -26,6 +26,8 @@ namespace projetFinal
         public Employes()
         {
             this.InitializeComponent();
+            //gridViewEmployes.ItemsSource = SingletonEmploye.getInstance().getListeEmployes();
+            //gridViewEmployes.Visibility = Visibility.Collapsed;
         }
     }
 }
