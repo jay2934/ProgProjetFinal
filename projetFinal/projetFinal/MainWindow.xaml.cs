@@ -26,7 +26,7 @@ namespace projetFinal
         public MainWindow()
         {
             this.InitializeComponent();
-            mainFrame.Navigate(typeof(Clients));
+            mainFrame.Navigate(typeof(Projets));
         }
 
         private void navView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)

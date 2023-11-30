@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid>
-        <NavigationView PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView" SelectionChanged="navView_SelectionChanged">
+        <NavigationView PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView" SelectionChanged="navView_SelectionChanged" IsSettingsVisible="False">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Employés" x:Name="navEmployes" Icon="People"/>
                 <NavigationViewItem Content="Clients" x:Name="navClients" Icon="Shop"/>

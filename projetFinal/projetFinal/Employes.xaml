@@ -14,25 +14,28 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <GridView>
+            
+            <GridView x:Name="gridViewEmployes">
                 <GridView.ItemTemplate>
                     <DataTemplate x:Name="IconTextTemplate">
-                        <StackPanel Width="664" Height="48" Padding="12" Orientation="Horizontal"></StackPanel>
+                        <StackPanel Padding="10" Orientation="Vertical">
+                            <TextBlock x:Name="employeMatricule"/>
+                            <TextBlock x:Name="employeNom"/>
+                            <TextBlock x:Name="employePrenom"/>
+                            <TextBlock x:Name="employeDateNaissance"/>
+                            <TextBlock x:Name="employeEmail"/>
+                            <TextBlock x:Name="employeAdresse"/>
+                            <TextBlock x:Name="employeDateEmbauche"/>
+                            <TextBlock x:Name="employeTauxHoraire"/>
+                            <TextBlock x:Name="employeStatut"/>
+                        </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
-                <x:String>a</x:String>
-                <x:String>a</x:String>
-                <x:String>a</x:String>
-                <x:String>a</x:String>
-                <x:String>a</x:String>
             </GridView>
         </Grid>
     </StackPanel>
