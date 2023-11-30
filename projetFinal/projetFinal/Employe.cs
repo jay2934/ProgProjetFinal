@@ -8,12 +8,11 @@ namespace projetFinal
 {
     class Employe
     {
-        string matriulce, nom, prenom, date_naissance, email, adresse, date_embauche, photo, statut;
+        string nom, prenom, date_naissance, email, adresse, date_embauche, photo, statut;
         decimal taux_horaire;
 
         public Employe()
         {
-            matriulce = "EM-2000-20";
             nom = "Employe";
             prenom = "Un";
             date_naissance = "2000-01-01";
@@ -25,9 +24,8 @@ namespace projetFinal
             statut = "Permanent";
         }
 
-        public Employe(string matriulce, string nom, string prenom, string date_naissance, string email, string adresse, string date_embauche, string photo, string statut, decimal taux_horaire)
+        public Employe(string nom, string prenom, string date_naissance, string email, string adresse, string date_embauche, string photo, string statut, decimal taux_horaire)
         {
-            this.matriulce = matriulce;
             this.nom = nom;
             this.prenom = prenom;
             this.date_naissance = date_naissance;
@@ -39,7 +37,6 @@ namespace projetFinal
             this.taux_horaire = taux_horaire;
         }
 
-        public string Matriulce { get => matriulce; set => matriulce = value; }
         public string Nom { get => nom; set => nom = value; }
         public string Prenom { get => prenom; set => prenom = value; }
         public string Date_naissance { get => date_naissance; set => date_naissance = value; }
@@ -53,7 +50,6 @@ namespace projetFinal
         public override bool Equals(object obj)
         {
             return obj is Employe employe &&
-                   matriulce == employe.matriulce &&
                    nom == employe.nom &&
                    prenom == employe.prenom &&
                    date_naissance == employe.date_naissance &&
@@ -63,7 +59,6 @@ namespace projetFinal
                    photo == employe.photo &&
                    statut == employe.statut &&
                    taux_horaire == employe.taux_horaire &&
-                   Matriulce == employe.Matriulce &&
                    Nom == employe.Nom &&
                    Prenom == employe.Prenom &&
                    Date_naissance == employe.Date_naissance &&
@@ -78,7 +73,6 @@ namespace projetFinal
         public override int GetHashCode()
         {
             HashCode hash = new HashCode();
-            hash.Add(matriulce);
             hash.Add(nom);
             hash.Add(prenom);
             hash.Add(date_naissance);
@@ -88,7 +82,6 @@ namespace projetFinal
             hash.Add(photo);
             hash.Add(statut);
             hash.Add(taux_horaire);
-            hash.Add(Matriulce);
             hash.Add(Nom);
             hash.Add(Prenom);
             hash.Add(Date_naissance);
@@ -103,7 +96,7 @@ namespace projetFinal
 
         public override string ToString()
         {
-            return $"Matricule = {matriulce} Nom = {nom} Prenom = {prenom} Date de naissance = {date_naissance} " +
+            return $"Nom = {nom} Prenom = {prenom} Date de naissance = {date_naissance} " +
                 $"Email = {email} Adresse = {adresse} Date d'embauche {date_embauche} Taux horaire = {taux_horaire} Photo = {photo} Statut = {statut}";
         }
     }
