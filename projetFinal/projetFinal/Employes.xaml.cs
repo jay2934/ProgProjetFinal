@@ -29,5 +29,15 @@ namespace projetFinal
             gridViewEmployes.ItemsSource = SingletonEmploye.getInstance().GetListeEmploye();
             //gridViewEmployes.Visibility = Visibility.Collapsed;
         }
+        private async void btnAjouterEmploye_Click(object sender, RoutedEventArgs e)
+        {
+            AjouterEmploye dialog = new AjouterEmploye();
+            dialog.XamlRoot = GridEmploye.XamlRoot;
+            dialog.Title = "Ajout d'un employé";
+            dialog.PrimaryButtonText = "Ajouter";
+            dialog.CloseButtonText = "Annuler";
+
+            ContentDialogResult resultat = await dialog.ShowAsync();
+        }
     }
 }

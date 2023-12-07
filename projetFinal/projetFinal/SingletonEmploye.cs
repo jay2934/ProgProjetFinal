@@ -34,7 +34,7 @@ namespace projetFinal
             liste.Clear();
             try
             {
-                MySqlCommand commande = new MySqlCommand("p_afficher_employees");
+                MySqlCommand commande = new MySqlCommand("p_afficher_employes");
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
                 con.Open();
@@ -68,43 +68,74 @@ namespace projetFinal
 
             return liste;
         }
-    /*
-        public Maison getMaison(int position)
-        {
-            return liste[position];
-        }
 
-        public void ajouter(Maison maison)
+        public void AjoutEmploye(string nom, string prenom, string date_naissance, string email, string adresse, string date_embauche, decimal taux_horaire, string photo, string statut)
         {
-            string categorie = maison.Categorie;
-            decimal prix = maison.Prix;
-            string ville = maison.Ville;
-            int id_proprietaire = maison.Id_proprietaire;
             try
             {
-                MySqlCommand commande = new MySqlCommand("p_ajouter_maison");
+                MySqlCommand commande = new MySqlCommand("p_ajout_employes");
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-                commande.Parameters.AddWithValue("categorie", categorie);
-                commande.Parameters.AddWithValue("prix", prix);
-                commande.Parameters.AddWithValue("ville", ville);
-                commande.Parameters.AddWithValue("id_proprietaire", id_proprietaire);
+                commande.Parameters.AddWithValue("nom_", nom);
+                commande.Parameters.AddWithValue("prenom_", prenom);
+                commande.Parameters.AddWithValue("date_naissance_", date_naissance);
+                commande.Parameters.AddWithValue("email_", email);
+                commande.Parameters.AddWithValue("adresse_", adresse);
+                commande.Parameters.AddWithValue("date_embauche_", date_embauche);
+                commande.Parameters.AddWithValue("taux_horaire_", taux_horaire);
+                commande.Parameters.AddWithValue("photo_", photo);
+                commande.Parameters.AddWithValue("statut_", statut);
 
                 con.Open();
+
                 commande.Prepare();
                 commande.ExecuteNonQuery();
 
                 con.Close();
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
                 con.Close();
             }
-
-            liste.Add(maison);
         }
-    */
+        /*
+            public Maison getMaison(int position)
+            {
+                return liste[position];
+            }
+
+            public void ajouter(Maison maison)
+            {
+                string categorie = maison.Categorie;
+                decimal prix = maison.Prix;
+                string ville = maison.Ville;
+                int id_proprietaire = maison.Id_proprietaire;
+                try
+                {
+                    MySqlCommand commande = new MySqlCommand("p_ajouter_maison");
+                    commande.Connection = con;
+                    commande.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    commande.Parameters.AddWithValue("categorie", categorie);
+                    commande.Parameters.AddWithValue("prix", prix);
+                    commande.Parameters.AddWithValue("ville", ville);
+                    commande.Parameters.AddWithValue("id_proprietaire", id_proprietaire);
+
+                    con.Open();
+                    commande.Prepare();
+                    commande.ExecuteNonQuery();
+
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    con.Close();
+                }
+
+                liste.Add(maison);
+            }
+        */
         public void modifier(int position, Employe maison)
         {
             liste[position] = maison;

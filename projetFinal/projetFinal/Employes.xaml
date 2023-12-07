@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="LightGray">
+    <Grid Background="LightGray" x:Name="GridEmploye">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -18,15 +18,15 @@
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <Button Content="Ajouter un employé" Margin="15" Padding="20" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+        <StackPanel Grid.Row="0" Background="DarkGray"  BorderBrush="DimGray" BorderThickness="3">
+            <Button x:Name="btnAjouterEmploye" Click="btnAjouterEmploye_Click" Content="Ajouter un employé" Margin="10" Padding="20" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <StackPanel HorizontalAlignment="Center">
                 <GridView x:Name="gridViewEmployes">
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="local:Employe">
-                            <StackPanel Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="340">
+                            <StackPanel Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="330">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
