@@ -1,1 +1,1 @@
-C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\projetFinal.csproj;x64
+C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\projetFinal.csproj;x64

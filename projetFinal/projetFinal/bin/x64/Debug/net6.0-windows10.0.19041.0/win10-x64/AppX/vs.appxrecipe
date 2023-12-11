@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>45b4173b-10b7-450f-bb84-8b58f9ad3efd</PackageIdentityName>
     <PackageIdentityPublisher>CN=2280608</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>93FF9627255EF1502B240394D08475085089EC598C1DF3698C08F22870ADA2A5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>45b4173b-10b7-450f-bb84-8b58f9ad3efd_1.0.0.0_x64__5dpgp0zfc0x86</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>45b4173b-10b7-450f-bb84-8b58f9ad3efd_5dpgp0zfc0x86!App</RegisteredUserModeAppID>
@@ -26,32 +26,32 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-11T20:42:07.097</Modified>
+      <Modified>2023-12-11T20:55:15.923</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-11T20:42:06.766</Modified>
+      <Modified>2023-12-11T20:55:15.710</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.runtimeconfig.json">
       <PackagePath>projetFinal.runtimeconfig.json</PackagePath>
-      <Modified>2023-12-11T20:42:06.253</Modified>
+      <Modified>2023-12-11T20:55:15.658</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.dll">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.dll">
       <PackagePath>projetFinal.dll</PackagePath>
-      <Modified>2023-12-11T20:42:05.648</Modified>
+      <Modified>2023-12-11T20:55:15.538</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>projetFinal.exe</PackagePath>
-      <Modified>2023-12-11T20:42:05.654</Modified>
+      <Modified>2023-12-11T20:55:15.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.deps.json">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.deps.json">
       <PackagePath>projetFinal.deps.json</PackagePath>
-      <Modified>2023-12-11T20:42:06.112</Modified>
+      <Modified>2023-12-11T20:55:15.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbrub\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.22\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1013,31 +1013,31 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2023-04-28T12:58:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2023-12-11T20:32:21.780</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <Modified>2023-12-11T20:32:21.780</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <Modified>2023-12-11T20:32:21.781</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <Modified>2023-12-11T20:32:21.781</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <Modified>2023-12-11T20:32:21.783</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2023-12-11T20:32:21.783</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbrub\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <Modified>2023-12-11T20:32:21.783</Modified>
     </AppxPackagedFile>
