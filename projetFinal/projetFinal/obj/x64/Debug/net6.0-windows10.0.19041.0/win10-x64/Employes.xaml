@@ -25,9 +25,7 @@
             <GridView>
                 <GridView.ItemTemplate>
                     <DataTemplate x:Name="IconTextTemplate">
-                        <StackPanel Width="264" Height="48" Padding="12" Orientation="Horizontal">
-                            <TextBlock Margin="12,0,0,0" Width="204"/>
-                        </StackPanel>
+                        <StackPanel Width="664" Height="48" Padding="12" Orientation="Horizontal"></StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
                 <x:String>a</x:String>
