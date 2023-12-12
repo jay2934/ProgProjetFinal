@@ -20,10 +20,10 @@
         <StackPanel>
             <TextBox Header="Nom" x:Name="txtBoxNomEmploye"/>
             <TextBox Header="Prenom" x:Name="txtBoxPrenomEmploye"/>
-            <TextBox Header="Date de naissance" x:Name="txtBoxDateNaissanceEmploye"/>
+            <DatePicker Header="Date de naissance" x:Name="datePickerDateNaissanceEmploye"/>
             <TextBox Header="Email" x:Name="txtBoxEmailEmploye"/>
             <TextBox Header="Adresse" x:Name="txtBoxAdresseEmploye"/>
-            <TextBox Header="Date d'embauche" x:Name="txtBoxDateEmbaucheEmploye"/>
+            <DatePicker Header="Date d'embauche" x:Name="datePickerDateEmbaucheEmploye"/>
             <NumberBox Header="Taux horaire" x:Name="nbBoxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5"/>
             <TextBox Header="Photo" x:Name="txtBoxPhotoEmploye"/>
             <ComboBox Header="Statut" x:Name="txtBoxStatutEmploye">

@@ -1235,3 +1235,8 @@ C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debu
 C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\sbrub\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModifierEmploye.xbf
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModifierEmploye.g.i.cs
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModifierEmploye.g.cs
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModifierEmploye.xaml
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModifierEmploye.xbf

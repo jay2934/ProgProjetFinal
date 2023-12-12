@@ -23,7 +23,7 @@
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <StackPanel HorizontalAlignment="Center">
-                <GridView x:Name="gridViewEmployes">
+                <GridView x:Name="gridViewEmployes" SelectionChanged="gridViewEmployes_SelectionChanged">
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="local:Employe">
                             <StackPanel Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="330">

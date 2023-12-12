@@ -39,5 +39,10 @@ namespace projetFinal
 
             ContentDialogResult resultat = await dialog.ShowAsync();
         }
+
+        private void gridViewEmployes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -32,10 +32,12 @@ namespace projetFinal
 
             nom = txtBoxNomEmploye.Text;
             prenom = txtBoxPrenomEmploye.Text;
-            date_naissance = txtBoxDateNaissanceEmploye.Text;
+            date_naissance = datePickerDateNaissanceEmploye.SelectedDate.ToString();
+            date_naissance = date_naissance.Substring(0, date_naissance.IndexOf(" "));
             email = txtBoxEmailEmploye.Text;
             adresse = txtBoxAdresseEmploye.Text;
-            date_embauche = txtBoxDateEmbaucheEmploye.Text;
+            date_embauche = datePickerDateEmbaucheEmploye.SelectedDate.ToString();
+            date_embauche = date_embauche.Substring(0, date_embauche.IndexOf(" "));
             taux_horaire = (decimal) nbBoxTauxHoraireEmploye.Value;
             photo = txtBoxPhotoEmploye.Text;
             statut = txtBoxStatutEmploye.SelectedValue.ToString();

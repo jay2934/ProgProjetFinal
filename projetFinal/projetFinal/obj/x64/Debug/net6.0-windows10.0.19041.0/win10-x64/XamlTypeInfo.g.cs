@@ -224,7 +224,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[46];
+            _typeNameTable = new string[47];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -270,9 +270,10 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.InfoBadge";
             _typeNameTable[43] = "projetFinal.MainWindow";
             _typeNameTable[44] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[45] = "projetFinal.Projets";
+            _typeNameTable[45] = "projetFinal.ModifierEmploye";
+            _typeNameTable[46] = "projetFinal.Projets";
 
-            _typeTable = new global::System.Type[46];
+            _typeTable = new global::System.Type[47];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -318,7 +319,8 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge);
             _typeTable[43] = typeof(global::projetFinal.MainWindow);
             _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[45] = typeof(global::projetFinal.Projets);
+            _typeTable[45] = typeof(global::projetFinal.ModifierEmploye);
+            _typeTable[46] = typeof(global::projetFinal.Projets);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -363,7 +365,8 @@ namespace projetFinal.projetFinal_XamlTypeInfo
         private object Activate_39_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
         private object Activate_42_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
         private object Activate_43_MainWindow() { return new global::projetFinal.MainWindow(); }
-        private object Activate_45_Projets() { return new global::projetFinal.Projets(); }
+        private object Activate_45_ModifierEmploye() { return new global::projetFinal.ModifierEmploye(); }
+        private object Activate_46_Projets() { return new global::projetFinal.Projets(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -699,9 +702,16 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 45:   //  projetFinal.Projets
+            case 45:   //  projetFinal.ModifierEmploye
+                userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_45_ModifierEmploye;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 46:   //  projetFinal.Projets
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_45_Projets;
+                userType.Activator = Activate_46_Projets;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
