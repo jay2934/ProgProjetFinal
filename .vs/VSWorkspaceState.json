@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\projetFinal",
+    "\\projetFinal\\projetFinal"
   ],
-  "SelectedNode": "\\projetFinal.sln",
+  "SelectedNode": "\\projetFinal\\projetFinal\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -26,6 +26,16 @@ namespace projetFinal
         public Projets()
         {
             this.InitializeComponent();
+            gridViewProjets.ItemsSource = SingletonProjet.getInstance().GetListeProjet();
+        }
+        private async void btnAjouterProjet_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void gridViewProjets_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

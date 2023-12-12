@@ -9,7 +9,60 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock>Projets</TextBlock>
+    <Grid Background="LightGray" x:Name="GridProjet">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="DarkGray"  BorderBrush="DimGray" BorderThickness="3">
+            <Button x:Name="btnAjouterProjet" Click="btnAjouterProjet_Click" Content="Ajouter un projet" Margin="10" Padding="20" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel HorizontalAlignment="Center">
+                <GridView x:Name="gridViewProjets" SelectionChanged="gridViewProjets_SelectionChanged">
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Projet">
+                            <StackPanel Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="330">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Column="0">
+                                        <TextBlock Text="{x:Bind No_projet}" FontWeight="Bold" FontSize="20"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{x:Bind Titre}" FontWeight="SemiBold" FontSize="18"/>
+                                            <TextBlock Text="{x:Bind Date_debut}" FontWeight="SemiBold" FontSize="18" Padding="3 0 0 0"/>
+                                        </StackPanel>
+                                        <TextBlock Text="{x:Bind Description}"/>
+                                        <TextBlock Text="{x:Bind Budget}"/>
+                                        <TextBlock Text="{x:Bind Nb_employe}"/>
+                                    </StackPanel>
+                                </Grid>
+                                <StackPanel >
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Embauché le"/>
+                                        <TextBlock Text="{x:Bind Total_salaire}" Padding="3 0 0 0"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{x:Bind Client}" FontWeight="SemiBold"/>
+                                        <TextBlock Text="$ de taux horaire" FontWeight="SemiBold"/>
+                                    </StackPanel>
+                                    <TextBlock Text="{x:Bind Statut}" FontWeight="Bold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </StackPanel>
+        </ScrollViewer>
+
     </Grid>
 </Page>
