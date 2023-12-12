@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-12T00:54:16.100</Modified>
+      <Modified>2023-12-12T02:59:25.594</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-12T00:54:15.835</Modified>
+      <Modified>2023-12-12T02:59:25.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.runtimeconfig.json">
       <PackagePath>projetFinal.runtimeconfig.json</PackagePath>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.dll">
       <PackagePath>projetFinal.dll</PackagePath>
-      <Modified>2023-12-12T00:54:15.734</Modified>
+      <Modified>2023-12-12T02:59:24.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>projetFinal.exe</PackagePath>
-      <Modified>2023-12-12T00:54:15.750</Modified>
+      <Modified>2023-12-12T02:59:24.753</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\projetFinal.deps.json">
       <PackagePath>projetFinal.deps.json</PackagePath>
-      <Modified>2023-12-11T23:50:56.693</Modified>
+      <Modified>2023-12-12T02:59:25.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2266983\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.23\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

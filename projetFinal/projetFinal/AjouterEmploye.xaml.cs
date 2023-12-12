@@ -43,7 +43,6 @@ namespace projetFinal
             statut = txtBoxStatutEmploye.SelectedValue.ToString();
 
             SingletonEmploye.getInstance().AjoutEmploye(nom, prenom, date_naissance, email, adresse, date_embauche, taux_horaire, photo, statut);
-
         }
     }
 }

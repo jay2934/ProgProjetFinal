@@ -18,11 +18,19 @@ using Windows.Foundation.Collections;
 
 namespace projetFinal
 {
-    public sealed partial class ModifierEmploye : UserControl
+    public sealed partial class ModificationEmploye : ContentDialog
     {
-        public ModifierEmploye()
+        public ModificationEmploye(int position)
         {
             this.InitializeComponent();
+            Employe employe = new Employe();
+            employe = SingletonEmploye.getInstance().getEmploye(position);
+            txtBoxNomEmploye.Text = employe.Nom;
+        }
+
+        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+
         }
     }
 }

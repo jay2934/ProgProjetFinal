@@ -18,8 +18,9 @@
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Background="DarkGray"  BorderBrush="DimGray" BorderThickness="3">
-            <Button x:ConnectionId='16' x:Name="btnAjouterEmploye"                                 Content="Ajouter un employé" Margin="10" Padding="20" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+        <StackPanel Grid.Row="0" Background="DarkGray"  BorderBrush="DimGray" BorderThickness="3" Orientation="Horizontal">
+            <Button x:ConnectionId='16' x:Name="btnAjouterEmploye"                                 Content="Ajouter un employé" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+            <Button x:ConnectionId='17' x:Name="btnRefreshEmploye"                                 Content="Rafraichir" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <StackPanel HorizontalAlignment="Center">
@@ -49,7 +50,7 @@
                                         <Image x:ConnectionId='9'                         MaxWidth="90"/>
                                     </StackPanel>
                                 </Grid>
-                                <StackPanel >
+                                <StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Embauché le"/>
                                         <TextBlock x:ConnectionId='8'                               Padding="3 0 0 0"/>

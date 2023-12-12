@@ -40,9 +40,24 @@ namespace projetFinal
             ContentDialogResult resultat = await dialog.ShowAsync();
         }
 
-        private void gridViewEmployes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void gridViewEmployes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (gridViewEmployes.SelectedIndex != -1) { 
+                int position = gridViewEmployes.SelectedIndex;
 
+                ModificationEmploye dialog = new ModificationEmploye(position);
+                dialog.XamlRoot = GridEmploye.XamlRoot;
+                dialog.Title = "Modification d'un employé";
+                dialog.PrimaryButtonText = "Modifier";
+                dialog.CloseButtonText = "Annuler";
+
+                ContentDialogResult resultat = await dialog.ShowAsync();
+            }
+        }
+
+        private void btnRefreshEmploye_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Employes));
         }
     }
 }

@@ -18,8 +18,9 @@
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Background="DarkGray"  BorderBrush="DimGray" BorderThickness="3">
-            <Button x:Name="btnAjouterEmploye" Click="btnAjouterEmploye_Click" Content="Ajouter un employé" Margin="10" Padding="20" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+        <StackPanel Grid.Row="0" Background="DarkGray"  BorderBrush="DimGray" BorderThickness="3" Orientation="Horizontal">
+            <Button x:Name="btnAjouterEmploye" Click="btnAjouterEmploye_Click" Content="Ajouter un employé" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+            <Button x:Name="btnRefreshEmploye" Click="btnRefreshEmploye_Click" Content="Rafraichir" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <StackPanel HorizontalAlignment="Center">
@@ -49,7 +50,7 @@
                                         <Image Source="{x:Bind Photo}" MaxWidth="90"/>
                                     </StackPanel>
                                 </Grid>
-                                <StackPanel >
+                                <StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Embauché le"/>
                                         <TextBlock Text="{x:Bind Date_embauche}" Padding="3 0 0 0"/>

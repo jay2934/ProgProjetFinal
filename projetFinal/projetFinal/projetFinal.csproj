@@ -15,7 +15,7 @@
     <None Remove="AjouterEmploye.xaml" />
     <None Remove="Clients.xaml" />
     <None Remove="Employes.xaml" />
-    <None Remove="ModifierEmploye.xaml" />
+    <None Remove="ModificationEmploye.xaml" />
     <None Remove="Projets.xaml" />
   </ItemGroup>
 
@@ -45,7 +45,7 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ModifierEmploye.xaml">
+    <Page Update="ModificationEmploye.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
