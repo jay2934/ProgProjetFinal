@@ -8,7 +8,7 @@ namespace projetFinal
 {
     class Projet
     {
-        string no_projet, titre, date_debut, description, statut;
+        string titre, date_debut, description, statut;
         decimal budget, total_salaire;
         int nb_employe, client;
 
@@ -35,7 +35,6 @@ namespace projetFinal
             this.statut = statut;
         }
 
-        public string No_projet { get => no_projet; }
         public string Titre { get => titre; set => titre = value; }
         public string Date_debut { get => date_debut; set => date_debut = value; }
         public string Description { get => description; set => description = value; }
@@ -48,7 +47,6 @@ namespace projetFinal
         public override bool Equals(object obj)
         {
             return obj is Projet projet &&
-                   no_projet == projet.no_projet &&
                    titre == projet.titre &&
                    date_debut == projet.date_debut &&
                    description == projet.description &&
@@ -57,7 +55,6 @@ namespace projetFinal
                    total_salaire == projet.total_salaire &&
                    client == projet.client &&
                    statut == projet.statut &&
-                   No_projet == projet.No_projet &&
                    Titre == projet.Titre &&
                    Date_debut == projet.Date_debut &&
                    Description == projet.Description &&
@@ -71,7 +68,6 @@ namespace projetFinal
         public override int GetHashCode()
         {
             HashCode hash = new HashCode();
-            hash.Add(no_projet);
             hash.Add(titre);
             hash.Add(date_debut);
             hash.Add(description);
@@ -80,7 +76,6 @@ namespace projetFinal
             hash.Add(total_salaire);
             hash.Add(client);
             hash.Add(statut);
-            hash.Add(No_projet);
             hash.Add(Titre);
             hash.Add(Date_debut);
             hash.Add(Description);
@@ -94,7 +89,7 @@ namespace projetFinal
 
         public override string ToString()
         {
-            return $"No_projet = {no_projet} Titre = {titre} Date de début = {date_debut} Description = {description} Budget = {budget} Nombre d'employés {nb_employe} Total des salaires = {total_salaire} Client = {client} Statut = {statut}";
+            return $"Titre = {titre} Date de début = {date_debut} Description = {description} Budget = {budget} Nombre d'employés {nb_employe} Total des salaires = {total_salaire} Client = {client} Statut = {statut}";
         }
     }
 }

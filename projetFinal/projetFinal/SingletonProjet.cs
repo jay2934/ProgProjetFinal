@@ -41,7 +41,6 @@ namespace projetFinal
                 MySqlDataReader r = commande.ExecuteReader();
                 while (r.Read())
                 {
-                    string no_projet = (string)r["no_projet"];
                     string titre = (string)r["titre"];
                     string date_debut = Convert.ToString(r["date_debut"]);
                     string description = (string)r["description"];
