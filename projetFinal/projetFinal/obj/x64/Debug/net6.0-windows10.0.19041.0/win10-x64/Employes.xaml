@@ -24,7 +24,7 @@
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <StackPanel HorizontalAlignment="Center">
-                <GridView x:ConnectionId='3' x:Name="gridViewEmployes"                                                     >
+                <GridView x:ConnectionId='3' x:Name="gridViewEmployes" SelectionMode="Single" IsItemClickEnabled="True"                                       >
                     <GridView.ItemTemplate>
                         <DataTemplate                           >
                             <StackPanel x:ConnectionId='5' Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="330">

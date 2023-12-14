@@ -26,6 +26,7 @@ namespace projetFinal
         public Clients()
         {
             this.InitializeComponent();
+            lvClients.ItemsSource = SingletonClient.getInstance().GetListeClient();
         }
     }
 }

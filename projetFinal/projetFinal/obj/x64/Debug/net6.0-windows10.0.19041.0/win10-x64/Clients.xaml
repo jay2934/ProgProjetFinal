@@ -10,7 +10,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:ConnectionId='2' x:Name="tbxtest">Clients</TextBlock>
+        <ListView x:ConnectionId='2' x:Name="lvClients">
+            
+        </ListView>
     </Grid>
 </Page>
 
