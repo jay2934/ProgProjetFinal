@@ -40,7 +40,7 @@ namespace projetFinal
             date_embauche = date_embauche.Substring(0, date_embauche.IndexOf(" "));
             taux_horaire = (decimal) nbBoxTauxHoraireEmploye.Value;
             photo = txtBoxPhotoEmploye.Text;
-            statut = txtBoxStatutEmploye.SelectedValue.ToString();
+            statut = "Journalier";
 
             SingletonEmploye.getInstance().AjoutEmploye(nom, prenom, date_naissance, email, adresse, date_embauche, taux_horaire, photo, statut);
         }

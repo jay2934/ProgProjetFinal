@@ -7,7 +7,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-                                                         >
+                                                         
+    >
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,16 +21,12 @@
         <StackPanel>
             <TextBox x:ConnectionId='2' Header="Nom" x:Name="txtBoxNomEmploye"/>
             <TextBox x:ConnectionId='3' Header="Prenom" x:Name="txtBoxPrenomEmploye"/>
-            <DatePicker x:ConnectionId='4' Header="Date de naissance" x:Name="datePickerDateNaissanceEmploye"/>
-            <TextBox x:ConnectionId='5' Header="Email" x:Name="txtBoxEmailEmploye"/>
-            <TextBox x:ConnectionId='6' Header="Adresse" x:Name="txtBoxAdresseEmploye"/>
-            <DatePicker x:ConnectionId='7' Header="Date d'embauche" x:Name="datePickerDateEmbaucheEmploye"/>
-            <NumberBox x:ConnectionId='8' Header="Taux horaire" x:Name="nbBoxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5"/>
-            <TextBox x:ConnectionId='9' Header="Photo" x:Name="txtBoxPhotoEmploye"/>
-            <ComboBox x:ConnectionId='10' Header="Statut" x:Name="txtBoxStatutEmploye">
-                <x:String>Permanent</x:String>
-                <x:String>Journalier</x:String>
-            </ComboBox>
+            <TextBox x:ConnectionId='4' Header="Email" x:Name="txtBoxEmailEmploye"/>
+            <TextBox x:ConnectionId='5' Header="Adresse" x:Name="txtBoxAdresseEmploye"/>
+            <NumberBox x:ConnectionId='6' Header="Taux horaire" x:Name="nbBoxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5"/>
+            <TextBox x:ConnectionId='7' Header="Photo" x:Name="txtBoxPhotoEmploye"/>
+            <ToggleButton x:ConnectionId='8' Content="Rendre permanent" x:Name="btnPermanent" Margin="0 15 0 0"/>
+            
         </StackPanel>
     </Grid>
 </ContentDialog>

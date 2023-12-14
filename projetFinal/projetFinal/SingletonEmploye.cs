@@ -45,11 +45,11 @@ namespace projetFinal
                     string nom = (string)r["nom"];
                     string prenom = (string)r["prenom"];
                     string date_naissance = Convert.ToString(r["date_naissance"]);
-                    date_naissance = date_naissance.Remove(11);
+                    date_naissance = date_naissance.Remove(10);
                     string email = (string)r["email"];
                     string adresse = (string)r["adresse"];
                     string date_embauche = Convert.ToString(r["date_embauche"]);
-                    date_embauche = date_embauche.Remove(11);
+                    date_embauche = date_embauche.Remove(10);
                     decimal taux_horaire = (decimal)r["taux_horaire"];
                     string photo = (string)r["photo"];
                     string statut = (string)r["statut"];
@@ -115,6 +115,30 @@ namespace projetFinal
                 commande.Parameters.AddWithValue("adresse_", adresse);
                 commande.Parameters.AddWithValue("taux_horaire_", taux_horaire);
                 commande.Parameters.AddWithValue("photo_", photo);
+
+                con.Open();
+
+                commande.Prepare();
+                commande.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (MySqlException ex)
+            {
+                con.Close();
+            }
+        }
+
+        public void ModifierStatutEmploye(string matricule, string statut)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_statut_employes");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
+
+                commande.Parameters.AddWithValue("matricule_", matricule);
+                commande.Parameters.AddWithValue("statut_", statut);
 
                 con.Open();
 

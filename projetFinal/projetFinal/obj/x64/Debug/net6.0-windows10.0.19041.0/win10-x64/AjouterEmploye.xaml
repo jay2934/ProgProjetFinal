@@ -26,10 +26,6 @@
             <DatePicker x:ConnectionId='7' Header="Date d'embauche" x:Name="datePickerDateEmbaucheEmploye"/>
             <NumberBox x:ConnectionId='8' Header="Taux horaire" x:Name="nbBoxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5"/>
             <TextBox x:ConnectionId='9' Header="Photo" x:Name="txtBoxPhotoEmploye"/>
-            <ComboBox x:ConnectionId='10' Header="Statut" x:Name="txtBoxStatutEmploye">
-                <x:String>Permanent</x:String>
-                <x:String>Journalier</x:String>
-            </ComboBox>
         </StackPanel>
     </Grid>
 </ContentDialog>
