@@ -41,6 +41,7 @@ namespace projetFinal
                 MySqlDataReader r = commande.ExecuteReader();
                 while (r.Read())
                 {
+                    string no_projet = (string)r["no_projet"];
                     string titre = (string)r["titre"];
                     string date_debut = Convert.ToString(r["date_debut"]);
                     string description = (string)r["description"];
@@ -49,7 +50,7 @@ namespace projetFinal
                     decimal total_salaire = (decimal)r["total_salaire"];
                     int client = (int)r["client"];
                     string statut = (string)r["statut"];
-                    Projet projet = new Projet(titre,date_debut,description,budget,nb_employe,total_salaire,client,statut);
+                    Projet projet = new Projet(no_projet,titre,date_debut,description,budget,nb_employe,total_salaire,client,statut);
 
                     liste.Add(projet);
                 }
@@ -65,7 +66,7 @@ namespace projetFinal
             return liste;
         }
 
-        public void AjoutProjet(string titre, string date_debut, string description, decimal budget, int nb_employe, decimal total_salaire, int client, string statut)
+        public void AjoutProjet(string no_projet, string titre, string date_debut, string description, decimal budget, int nb_employe, decimal total_salaire, int client, string statut)
         {
             try
             {
@@ -73,6 +74,7 @@ namespace projetFinal
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
 
+                commande.Parameters.AddWithValue("no_projet_", no_projet);
                 commande.Parameters.AddWithValue("titre_", titre);
                 commande.Parameters.AddWithValue("date_debut_", date_debut);
                 commande.Parameters.AddWithValue("description_", description);

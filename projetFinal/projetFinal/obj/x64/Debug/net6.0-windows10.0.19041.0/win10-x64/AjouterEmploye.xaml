@@ -18,18 +18,77 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <TextBox x:ConnectionId='2' Header="Nom" x:Name="txtBoxNomEmploye"/>
-            <TextBox x:ConnectionId='3' Header="Prenom" x:Name="txtBoxPrenomEmploye"/>
-            <DatePicker x:ConnectionId='4' Header="Date de naissance" x:Name="datePickerDateNaissanceEmploye"/>
-            <TextBox x:ConnectionId='5' Header="Email" x:Name="txtBoxEmailEmploye"/>
-            <TextBox x:ConnectionId='6' Header="Adresse" x:Name="txtBoxAdresseEmploye"/>
-            <DatePicker x:ConnectionId='7' Header="Date d'embauche" x:Name="datePickerDateEmbaucheEmploye"/>
-            <NumberBox x:ConnectionId='8' Header="Taux horaire" x:Name="nbBoxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5"/>
-            <TextBox x:ConnectionId='9' Header="Photo" x:Name="txtBoxPhotoEmploye"/>
-            <ComboBox x:ConnectionId='10' Header="Statut" x:Name="txtBoxStatutEmploye">
-                <x:String>Permanent</x:String>
-                <x:String>Journalier</x:String>
-            </ComboBox>
+            <TextBox x:ConnectionId='2' x:Name="tbxNomEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Nom</TextBlock>
+                        <TextBlock x:ConnectionId='17' x:Name="headNomEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <TextBox x:ConnectionId='3' x:Name="tbxPrenomEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Prenom</TextBlock>
+                        <TextBlock x:ConnectionId='16' x:Name="headPrenomEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <DatePicker x:ConnectionId='4' x:Name="tbxDateNaissanceEmploye">
+                <DatePicker.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Date de naissance</TextBlock>
+                        <TextBlock x:ConnectionId='15' x:Name="headDateNaissanceEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </DatePicker.Header>
+            </DatePicker>
+
+            <TextBox x:ConnectionId='5' x:Name="tbxEmailEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Email</TextBlock>
+                        <TextBlock x:ConnectionId='14' x:Name="headEmailEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <TextBox x:ConnectionId='6' x:Name="tbxAdresseEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Adresse</TextBlock>
+                        <TextBlock x:ConnectionId='13' x:Name="headAdresseEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <DatePicker x:ConnectionId='7' x:Name="tbxDateEmbaucheEmploye">
+                <DatePicker.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Date d'embauche</TextBlock>
+                        <TextBlock x:ConnectionId='12' x:Name="headerDateEmbaucheEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </DatePicker.Header>
+            </DatePicker>
+
+            <NumberBox x:ConnectionId='8' x:Name="tbxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5">
+                <NumberBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Taux horaire</TextBlock>
+                        <TextBlock x:ConnectionId='11' x:Name="headTauxHoraireEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </NumberBox.Header>
+            </NumberBox>
+
+            <TextBox x:ConnectionId='9' x:Name="tbxPhotoEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Photo</TextBlock>
+                        <TextBlock x:ConnectionId='10' x:Name="headPhotoEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
         </StackPanel>
     </Grid>
 </ContentDialog>
