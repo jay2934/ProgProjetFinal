@@ -25,7 +25,7 @@
             <TextBox Header="Adresse" x:Name="txtBoxAdresseEmploye"/>
             <NumberBox Header="Taux horaire" x:Name="nbBoxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5"/>
             <TextBox Header="Photo" x:Name="txtBoxPhotoEmploye"/>
-            <ToggleButton Content="Rendre permanent" x:Name="btnPermanent" Margin="0 15 0 0"/>
+            <Button Content="Rendre permanent" x:Name="btnPermanent" Margin="0 15 0 0" Click="btnPermanent_Click"/>
             
         </StackPanel>
     </Grid>

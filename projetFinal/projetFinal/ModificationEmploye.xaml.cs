@@ -22,6 +22,8 @@ namespace projetFinal
     public sealed partial class ModificationEmploye : ContentDialog
     {
         private Employe employeModifiable;
+        private string statutEmploye;
+        bool checkBtnPermanent = false;
         public ModificationEmploye(int position)
         {
             this.InitializeComponent();
@@ -47,14 +49,13 @@ namespace projetFinal
 
             if(employeModifiable.Statut.Equals("Permanent"))
             {
-                btnPermanent.IsChecked= true;
+                btnPermanent.IsEnabled= false;
             }
         }
         
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             decimal tauxhoraire = (decimal)nbBoxTauxHoraireEmploye.Value;
-            string statut = btnPermanent.IsChecked == true ? "Permanent" : "Journalier";
 
 
             Employe employeModifier = new Employe(
@@ -66,7 +67,7 @@ namespace projetFinal
                 txtBoxAdresseEmploye.Text,
                 employeModifiable.Date_embauche,
                 txtBoxPhotoEmploye.Text,
-                statut,
+                statutEmploye,
                 tauxhoraire
             );
 
@@ -79,8 +80,17 @@ namespace projetFinal
                 employeModifier.Taux_horaire,
                 employeModifier.Photo
             );
+            if(checkBtnPermanent == true ) 
+            {
+                SingletonEmploye.getInstance().ModifierStatutEmploye(employeModifier.Matriulce, statutEmploye);
+            }
+        }
 
-            SingletonEmploye.getInstance().ModifierStatutEmploye(employeModifier.Matriulce, statut);
+        private void btnPermanent_Click(object sender, RoutedEventArgs e)
+        {
+            btnPermanent.IsEnabled = false;
+            statutEmploye = "Permanent";
+            checkBtnPermanent = true;
         }
     }
 }
