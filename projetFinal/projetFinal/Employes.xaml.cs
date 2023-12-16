@@ -27,7 +27,10 @@ namespace projetFinal
         {
             this.InitializeComponent();
             gridViewEmployes.ItemsSource = SingletonEmploye.getInstance().GetListeEmploye();
-            //gridViewEmployes.Visibility = Visibility.Collapsed;
+            if(Connexion.Connecter == false)
+            {
+                btnAjouterEmploye.Visibility = Visibility.Collapsed;
+            }
         }
         private async void btnAjouterEmploye_Click(object sender, RoutedEventArgs e)
         {

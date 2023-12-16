@@ -41,7 +41,6 @@ namespace projetFinal
                     int id = (int)r["id"];
                     string nom = (string)r["nom"];
                     string mot_de_passe = (string)r["mot_de_passe"];
-
                     Admin admin = new Admin(id, nom, mot_de_passe);
 
                     return admin;

@@ -2,6 +2,8 @@ AjoutAdmin.xbf
 AjouterEmploye.xbf
 App.xbf
 Clients.xbf
+Connexion.xbf
+Deconnexion.xbf
 Employes.xbf
 MainWindow.xbf
 ModificationEmploye.xbf

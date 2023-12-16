@@ -60,6 +60,12 @@ namespace projetFinal
                 case "navProjets":
                     mainFrame.Navigate(typeof(Projets));
                     break;
+                case "navConnexion":
+                    mainFrame.Navigate(typeof(Connexion));
+                    break;
+                case "navDeconnection":
+                    mainFrame.Navigate(typeof(Deconnexion));
+                    break;
                 default:
                     break;
             }
@@ -72,7 +78,7 @@ namespace projetFinal
             navClients.IsEnabled = true;
             navProjets.IsEnabled = true;
             navDeconnection.IsEnabled = true;
-            navConnexion.IsEnabled = true;
+            navConnexion.IsEnabled = true;   
         }
     }
 }

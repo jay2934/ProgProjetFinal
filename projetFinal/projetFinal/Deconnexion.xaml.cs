@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -21,18 +22,13 @@ namespace projetFinal
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AjoutAdmin : Page
+    public sealed partial class Deconnexion : Page
     {
-        public AjoutAdmin()
+        public Deconnexion()
         {
             this.InitializeComponent();
+            Connexion.Connecter = false;
         }
 
-        private void btnAjouterAdmin_Click(object sender, RoutedEventArgs e)
-        {
-            Singleton.getInstance().AjoutAdmin(txtBoxNomAdmin.Text, txtBoxMotDePasseAdmin.Text);
-            Connexion.Connecter = true;
-            this.Frame.Navigate(typeof(Projets));
-        }
     }
 }

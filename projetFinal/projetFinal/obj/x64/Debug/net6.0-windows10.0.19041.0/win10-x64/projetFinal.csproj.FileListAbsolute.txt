@@ -1245,3 +1245,13 @@ C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\De
 C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.g.cs
 C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.xaml
 C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.xbf
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Connexion.xbf
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Connexion.g.i.cs
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Connexion.g.cs
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Connexion.xaml
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Connexion.xbf
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Deconnexion.xbf
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Deconnexion.g.i.cs
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Deconnexion.g.cs
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Deconnexion.xaml
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Deconnexion.xbf
