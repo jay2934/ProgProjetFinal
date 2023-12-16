@@ -72,7 +72,7 @@
                 </DatePicker.Header>
             </DatePicker>
 
-            <NumberBox x:ConnectionId='8' x:Name="tbxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5">
+            <NumberBox x:ConnectionId='8' x:Name="tbxTauxHoraireEmploye" Value="15.25" SpinButtonPlacementMode="Compact" SmallChange=".25" Minimum="15.25" LargeChange="1">
                 <NumberBox.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">Taux horaire</TextBlock>

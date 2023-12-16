@@ -417,6 +417,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 userType.AddMemberName("Value");
                 userType.AddMemberName("SpinButtonPlacementMode");
                 userType.AddMemberName("SmallChange");
+                userType.AddMemberName("Minimum");
                 userType.AddMemberName("LargeChange");
                 userType.AddMemberName("Header");
                 userType.AddMemberName("AcceptsExpression");
@@ -424,7 +425,6 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 userType.AddMemberName("HeaderTemplate");
                 userType.AddMemberName("IsWrapEnabled");
                 userType.AddMemberName("Maximum");
-                userType.AddMemberName("Minimum");
                 userType.AddMemberName("NumberFormatter");
                 userType.AddMemberName("PlaceholderText");
                 userType.AddMemberName("PreventKeyboardDisplayOnProgrammaticFocus");
@@ -814,85 +814,85 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.SmallChange = (global::System.Double)Value;
         }
-        private object get_4_NumberBox_LargeChange(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            return that.LargeChange;
-        }
-        private void set_4_NumberBox_LargeChange(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            that.LargeChange = (global::System.Double)Value;
-        }
-        private object get_5_NumberBox_Header(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            return that.Header;
-        }
-        private void set_5_NumberBox_Header(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            that.Header = (global::System.Object)Value;
-        }
-        private object get_6_NumberBox_AcceptsExpression(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            return that.AcceptsExpression;
-        }
-        private void set_6_NumberBox_AcceptsExpression(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            that.AcceptsExpression = (global::System.Boolean)Value;
-        }
-        private object get_7_NumberBox_Description(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            return that.Description;
-        }
-        private void set_7_NumberBox_Description(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            that.Description = (global::System.Object)Value;
-        }
-        private object get_8_NumberBox_HeaderTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            return that.HeaderTemplate;
-        }
-        private void set_8_NumberBox_HeaderTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_9_NumberBox_IsWrapEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            return that.IsWrapEnabled;
-        }
-        private void set_9_NumberBox_IsWrapEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            that.IsWrapEnabled = (global::System.Boolean)Value;
-        }
-        private object get_10_NumberBox_Maximum(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            return that.Maximum;
-        }
-        private void set_10_NumberBox_Maximum(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
-            that.Maximum = (global::System.Double)Value;
-        }
-        private object get_11_NumberBox_Minimum(object instance)
+        private object get_4_NumberBox_Minimum(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.Minimum;
         }
-        private void set_11_NumberBox_Minimum(object instance, object Value)
+        private void set_4_NumberBox_Minimum(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.Minimum = (global::System.Double)Value;
+        }
+        private object get_5_NumberBox_LargeChange(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            return that.LargeChange;
+        }
+        private void set_5_NumberBox_LargeChange(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            that.LargeChange = (global::System.Double)Value;
+        }
+        private object get_6_NumberBox_Header(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            return that.Header;
+        }
+        private void set_6_NumberBox_Header(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_7_NumberBox_AcceptsExpression(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            return that.AcceptsExpression;
+        }
+        private void set_7_NumberBox_AcceptsExpression(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            that.AcceptsExpression = (global::System.Boolean)Value;
+        }
+        private object get_8_NumberBox_Description(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            return that.Description;
+        }
+        private void set_8_NumberBox_Description(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            that.Description = (global::System.Object)Value;
+        }
+        private object get_9_NumberBox_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_9_NumberBox_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_10_NumberBox_IsWrapEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            return that.IsWrapEnabled;
+        }
+        private void set_10_NumberBox_IsWrapEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            that.IsWrapEnabled = (global::System.Boolean)Value;
+        }
+        private object get_11_NumberBox_Maximum(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            return that.Maximum;
+        }
+        private void set_11_NumberBox_Maximum(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
+            that.Maximum = (global::System.Double)Value;
         }
         private object get_12_NumberBox_NumberFormatter(object instance)
         {
@@ -1445,61 +1445,61 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlMember.Getter = get_3_NumberBox_SmallChange;
                 xamlMember.Setter = set_3_NumberBox_SmallChange;
                 break;
+            case "Microsoft.UI.Xaml.Controls.NumberBox.Minimum":
+                userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
+                xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "Minimum", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_4_NumberBox_Minimum;
+                xamlMember.Setter = set_4_NumberBox_Minimum;
+                break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.LargeChange":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "LargeChange", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_NumberBox_LargeChange;
-                xamlMember.Setter = set_4_NumberBox_LargeChange;
+                xamlMember.Getter = get_5_NumberBox_LargeChange;
+                xamlMember.Setter = set_5_NumberBox_LargeChange;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Header":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "Header", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_NumberBox_Header;
-                xamlMember.Setter = set_5_NumberBox_Header;
+                xamlMember.Getter = get_6_NumberBox_Header;
+                xamlMember.Setter = set_6_NumberBox_Header;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.AcceptsExpression":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "AcceptsExpression", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_6_NumberBox_AcceptsExpression;
-                xamlMember.Setter = set_6_NumberBox_AcceptsExpression;
+                xamlMember.Getter = get_7_NumberBox_AcceptsExpression;
+                xamlMember.Setter = set_7_NumberBox_AcceptsExpression;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Description":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "Description", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_NumberBox_Description;
-                xamlMember.Setter = set_7_NumberBox_Description;
+                xamlMember.Getter = get_8_NumberBox_Description;
+                xamlMember.Setter = set_8_NumberBox_Description;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.HeaderTemplate":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_NumberBox_HeaderTemplate;
-                xamlMember.Setter = set_8_NumberBox_HeaderTemplate;
+                xamlMember.Getter = get_9_NumberBox_HeaderTemplate;
+                xamlMember.Setter = set_9_NumberBox_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.IsWrapEnabled":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "IsWrapEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_NumberBox_IsWrapEnabled;
-                xamlMember.Setter = set_9_NumberBox_IsWrapEnabled;
+                xamlMember.Getter = get_10_NumberBox_IsWrapEnabled;
+                xamlMember.Setter = set_10_NumberBox_IsWrapEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Maximum":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "Maximum", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_NumberBox_Maximum;
-                xamlMember.Setter = set_10_NumberBox_Maximum;
-                break;
-            case "Microsoft.UI.Xaml.Controls.NumberBox.Minimum":
-                userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
-                xamlMember = new global::projetFinal.projetFinal_XamlTypeInfo.XamlMember(this, "Minimum", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_11_NumberBox_Minimum;
-                xamlMember.Setter = set_11_NumberBox_Minimum;
+                xamlMember.Getter = get_11_NumberBox_Maximum;
+                xamlMember.Setter = set_11_NumberBox_Maximum;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.NumberFormatter":
                 userType = (global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");

@@ -52,16 +52,148 @@ namespace projetFinal
                 headPrenomEmploye.Text = "";
             }
 
-            if (tbxDateNaissanceEmploye.SelectedDate.ToString() == "")
+            if (tbxDateNaissanceEmploye.SelectedDate.ToString().Equals(""))
             {
                 invalide = true;
                 args.Cancel = true;
-                headDateNaissanceEmploye.Text = "* (La date ne doit pas être vide)";
+                headDateNaissanceEmploye.Text = "* (La date de naissance ne doit pas être vide)";
             }
-                //tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(0, tbxDateNaissanceEmploye.SelectedDate.ToString().IndexOf(" "))
             else
             {
-                headDateNaissanceEmploye.Text = "";
+                string anneeNaissance = tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(0,4);
+                string moisNaissance = tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(5,2);
+                string jourNaissance = tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(8,2);
+                int naissance = int.Parse(tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(0, 4)+tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(5, 2)+ tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(8, 2));
+                string anneeAujourdhui = DateTime.Now.ToString().Substring(0,4);
+                string moisAujourdhui = DateTime.Now.ToString().Substring(5,2);
+                string jourAujourdhui = DateTime.Now.ToString().Substring(8,2);
+                int aujourdhui = int.Parse(DateTime.Now.ToString().Substring(0, 4)+DateTime.Now.ToString().Substring(5, 2)+DateTime.Now.ToString().Substring(8, 2));
+                if (aujourdhui - naissance < 0)
+                {
+                    invalide = true;
+                    args.Cancel = true;
+                    headDateNaissanceEmploye.Text = "* (L'employé n'est pas née)";
+                }
+                else if (naissance > int.Parse((int.Parse(anneeAujourdhui) - 18) + moisAujourdhui + jourAujourdhui))
+                {
+                    invalide = true;
+                    args.Cancel = true;
+                    headDateNaissanceEmploye.Text = "* (L'employé n'est pas majeur)";
+                }
+                else
+                {
+                    headDateNaissanceEmploye.Text = "";
+                }
+            }
+
+            if (tbxEmailEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headEmailEmploye.Text = "* (L'adresse mail ne doit pas être vide)";
+            }
+            else if (!tbxEmailEmploye.Text.Contains("@"))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headEmailEmploye.Text = "* (L'adresse mail doit avoir un '@')";
+            }
+            else if (!tbxEmailEmploye.Text.Substring(tbxEmailEmploye.Text.IndexOf("@")).Contains("."))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headEmailEmploye.Text = "* (L'adresse mail doit avoir un domaine)";
+            }
+            else
+            {
+                headEmailEmploye.Text = "";
+            }
+
+            if (tbxAdresseEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headAdresseEmploye.Text = "* (L'adresse ne doit pas être vide)";
+            }
+            else
+            {
+                headAdresseEmploye.Text = "";
+            }
+
+            if (tbxDateEmbaucheEmploye.SelectedDate.ToString().Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headerDateEmbaucheEmploye.Text = "* (La date d'embauche ne doit pas être vide)";
+            }
+            else if (tbxDateEmbaucheEmploye.SelectedDate > DateTime.Now)
+            {
+                invalide = true;
+                args.Cancel = true;
+                headerDateEmbaucheEmploye.Text = "* (La date d'embauche doit être avant aujourd'hui)";
+            }
+            else if (tbxDateNaissanceEmploye.SelectedDate.ToString().Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headerDateEmbaucheEmploye.Text = "";
+            }
+            else
+            {
+                string anneeNaissance = tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(0, 4);
+                string moisNaissance = tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(5, 2);
+                string jourNaissance = tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(8, 2);
+                int naissance = int.Parse(tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(0, 4) + tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(5, 2) + tbxDateNaissanceEmploye.SelectedDate.ToString().Substring(8, 2));
+
+                string anneeEmbauche = tbxDateEmbaucheEmploye.SelectedDate.ToString().Substring(0, 4);
+                string moisEmbauche = tbxDateEmbaucheEmploye.SelectedDate.ToString().Substring(5, 2);
+                string jourEmbauche = tbxDateEmbaucheEmploye.SelectedDate.ToString().Substring(8, 2);
+                int Embauche = int.Parse(tbxDateEmbaucheEmploye.SelectedDate.ToString().Substring(0, 4) + tbxDateEmbaucheEmploye.SelectedDate.ToString().Substring(5, 2) + tbxDateEmbaucheEmploye.SelectedDate.ToString().Substring(8, 2));
+
+                if (naissance <= int.Parse((int.Parse(anneeEmbauche) - 65) + moisEmbauche + jourEmbauche))
+                {
+                    invalide = true;
+                    args.Cancel = true;
+                    headerDateEmbaucheEmploye.Text = "* (L'employé a l'âge de la retraite)";
+                }
+                else if (Embauche - naissance < 0)
+                {
+                    invalide = true;
+                    args.Cancel = true;
+                    headerDateEmbaucheEmploye.Text = "* (L'employé ne peut pas être embauché avant la naissance)";
+                }
+                else if (naissance > int.Parse((int.Parse(anneeEmbauche) - 18) + moisEmbauche + jourEmbauche))
+                {
+                    invalide = true;
+                    args.Cancel = true;
+                    headerDateEmbaucheEmploye.Text = "* (L'employé n'est pas majeur)";
+                }
+                else
+                {
+                    headerDateEmbaucheEmploye.Text = "";
+                }
+            }
+
+            if (tbxTauxHoraireEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headTauxHoraireEmploye.Text = "* (Le taux horaire ne doit pas être vide)";
+            }
+            else
+            {
+                headTauxHoraireEmploye.Text = "";
+            }
+
+            if (tbxPhotoEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headPhotoEmploye.Text = "* (La photo ne doit pas être vide)";
+            }
+            else
+            {
+                headPhotoEmploye.Text = "";
             }
 
             if (invalide == false)
