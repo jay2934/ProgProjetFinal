@@ -18,14 +18,77 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <TextBox Header="Nom" x:Name="txtBoxNomEmploye"/>
-            <TextBox Header="Prenom" x:Name="txtBoxPrenomEmploye"/>
-            <DatePicker Header="Date de naissance" x:Name="datePickerDateNaissanceEmploye"/>
-            <TextBox Header="Email" x:Name="txtBoxEmailEmploye"/>
-            <TextBox Header="Adresse" x:Name="txtBoxAdresseEmploye"/>
-            <DatePicker Header="Date d'embauche" x:Name="datePickerDateEmbaucheEmploye"/>
-            <NumberBox Header="Taux horaire" x:Name="nbBoxTauxHoraireEmploye" Value="20" SpinButtonPlacementMode="Compact" SmallChange="1" LargeChange="5"/>
-            <TextBox Header="Photo" x:Name="txtBoxPhotoEmploye"/>
+            <TextBox x:Name="tbxNomEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Nom</TextBlock>
+                        <TextBlock x:Name="headNomEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <TextBox x:Name="tbxPrenomEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Prenom</TextBlock>
+                        <TextBlock x:Name="headPrenomEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <DatePicker x:Name="tbxDateNaissanceEmploye">
+                <DatePicker.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Date de naissance</TextBlock>
+                        <TextBlock x:Name="headDateNaissanceEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </DatePicker.Header>
+            </DatePicker>
+
+            <TextBox x:Name="tbxEmailEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Email</TextBlock>
+                        <TextBlock x:Name="headEmailEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <TextBox x:Name="tbxAdresseEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Adresse</TextBlock>
+                        <TextBlock x:Name="headAdresseEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <DatePicker x:Name="tbxDateEmbaucheEmploye">
+                <DatePicker.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Date d'embauche</TextBlock>
+                        <TextBlock x:Name="headerDateEmbaucheEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </DatePicker.Header>
+            </DatePicker>
+
+            <NumberBox x:Name="tbxTauxHoraireEmploye" Value="15.25" SpinButtonPlacementMode="Compact" SmallChange=".25" Minimum="15.25" LargeChange="1">
+                <NumberBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Taux horaire</TextBlock>
+                        <TextBlock x:Name="headTauxHoraireEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </NumberBox.Header>
+            </NumberBox>
+
+            <TextBox x:Name="tbxPhotoEmploye">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Photo</TextBlock>
+                        <TextBlock x:Name="headPhotoEmploye" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
         </StackPanel>
     </Grid>
 </ContentDialog>
