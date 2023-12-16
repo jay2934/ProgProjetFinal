@@ -10,9 +10,37 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:ConnectionId='2' x:Name="lvClients">
-            
-        </ListView>
+        <ScrollViewer>
+            <ListView x:ConnectionId='2' x:Name="lvClients">
+                <ListView.ItemTemplate>
+                    <DataTemplate                          >
+                        <Grid x:ConnectionId='4' Background="LightGray" BorderBrush="DarkGray" BorderThickness="3" CornerRadius="5" Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="15" Padding="5">
+                                <TextBlock x:ConnectionId='8'                     FontWeight="SemiBold"/>
+                                <TextBlock x:ConnectionId='9'                      />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="15" Padding="5">
+                                <TextBlock x:ConnectionId='6'                        />
+                                <TextBlock x:ConnectionId='7'                             />
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="15">
+                                <TextBlock x:ConnectionId='5'                             FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+
     </Grid>
 </Page>
 

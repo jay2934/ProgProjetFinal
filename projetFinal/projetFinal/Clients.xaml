@@ -10,8 +10,36 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="lvClients">
-            
-        </ListView>
+        <ScrollViewer>
+            <ListView x:Name="lvClients">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:Client">
+                        <Grid Background="LightGray" BorderBrush="DarkGray" BorderThickness="3" CornerRadius="5" Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="15" Padding="5">
+                                <TextBlock Text="{x:Bind Nom}" FontWeight="SemiBold"/>
+                                <TextBlock Text="{x:Bind Email}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="15" Padding="5">
+                                <TextBlock Text="{x:Bind Adresse}"/>
+                                <TextBlock Text="{x:Bind No_telephone}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="15">
+                                <TextBlock Text="{x:Bind Identifiant}" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+
     </Grid>
 </Page>

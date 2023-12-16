@@ -1240,3 +1240,8 @@ C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\De
 C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModificationEmploye.xaml
 C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModificationEmploye.xbf
 C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ModificationEmploye.xbf
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.xbf
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.g.i.cs
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.g.cs
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.xaml
+C:\Users\2266983\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjoutAdmin.xbf

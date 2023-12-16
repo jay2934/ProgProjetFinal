@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid x:Name="GridPrincipal">
         <NavigationView PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView" SelectionChanged="navView_SelectionChanged" IsSettingsVisible="False">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Employés" x:Name="navEmployes" Icon="People"/>
@@ -16,6 +16,7 @@
                 <NavigationViewItem Content="Projets" x:Name="navProjets" Icon="Library"/>
             </NavigationView.MenuItems>
             <NavigationView.FooterMenuItems>
+                <NavigationViewItem Content="Connexion" x:Name="navConnexion" Icon="Account"/>
                 <NavigationViewItem Content="Déconnection" x:Name="navDeconnection" Icon="Permissions"/>
             </NavigationView.FooterMenuItems>
             <Frame x:Name="mainFrame"/>

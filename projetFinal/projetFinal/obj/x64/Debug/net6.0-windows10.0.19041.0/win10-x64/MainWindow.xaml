@@ -8,17 +8,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <NavigationView x:ConnectionId='2' PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView"                                             IsSettingsVisible="False">
+    <Grid x:ConnectionId='2' x:Name="GridPrincipal">
+        <NavigationView x:ConnectionId='3' PaneDisplayMode="Left" PaneTitle="Gestionnaire de projets" x:Name="navView"                                             IsSettingsVisible="False">
             <NavigationView.MenuItems>
-                <NavigationViewItem x:ConnectionId='3' Content="Employés" x:Name="navEmployes" Icon="People"/>
-                <NavigationViewItem x:ConnectionId='4' Content="Clients" x:Name="navClients" Icon="Shop"/>
-                <NavigationViewItem x:ConnectionId='5' Content="Projets" x:Name="navProjets" Icon="Library"/>
+                <NavigationViewItem x:ConnectionId='4' Content="Employés" x:Name="navEmployes" Icon="People"/>
+                <NavigationViewItem x:ConnectionId='5' Content="Clients" x:Name="navClients" Icon="Shop"/>
+                <NavigationViewItem x:ConnectionId='6' Content="Projets" x:Name="navProjets" Icon="Library"/>
             </NavigationView.MenuItems>
             <NavigationView.FooterMenuItems>
-                <NavigationViewItem x:ConnectionId='6' Content="Déconnection" x:Name="navDeconnection" Icon="Permissions"/>
+                <NavigationViewItem x:ConnectionId='7' Content="Connexion" x:Name="navConnexion" Icon="Account"/>
+                <NavigationViewItem x:ConnectionId='8' Content="Déconnection" x:Name="navDeconnection" Icon="Permissions"/>
             </NavigationView.FooterMenuItems>
-            <Frame x:ConnectionId='7' x:Name="mainFrame"/>
+            <Frame x:ConnectionId='9' x:Name="mainFrame"/>
         </NavigationView>
     </Grid>
 </Window>

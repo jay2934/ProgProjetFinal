@@ -26,8 +26,24 @@ namespace projetFinal
         public MainWindow()
         {
             this.InitializeComponent();
-            mainFrame.Navigate(typeof(Projets));
+            Admin admin = Singleton.getInstance().CheckAdmin();
+
+            if (admin.Nom != null)
+            {
+                mainFrame.Navigate(typeof(Projets));
+            }
+            else
+            {
+                mainFrame.Navigate(typeof(AjoutAdmin));
+                navEmployes.IsEnabled = false;
+                navClients.IsEnabled = false;
+                navProjets.IsEnabled = false;
+                navDeconnection.IsEnabled = false;
+                navConnexion.IsEnabled = false;
+            }
         }
+
+
 
         private void navView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
