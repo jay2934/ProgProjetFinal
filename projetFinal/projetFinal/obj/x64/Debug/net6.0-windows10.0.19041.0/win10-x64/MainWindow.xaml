@@ -19,7 +19,7 @@
                 <NavigationViewItem x:ConnectionId='7' Content="Connexion" x:Name="navConnexion" Icon="Account"/>
                 <NavigationViewItem x:ConnectionId='8' Content="Déconnection" x:Name="navDeconnection" Icon="Permissions"/>
             </NavigationView.FooterMenuItems>
-            <Frame x:ConnectionId='9' x:Name="mainFrame"/>
+            <Frame x:ConnectionId='9' x:Name="mainFrame"                                />
         </NavigationView>
     </Grid>
 </Window>

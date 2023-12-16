@@ -60,5 +60,29 @@ namespace projetFinal
                 con.Close(); //Dans tout les cas, fermer la connexion
             }
         }
+
+        public void AjoutAdmin(string nom, string mot_de_passe)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_ajout_admin");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
+
+                commande.Parameters.AddWithValue("nom_", nom);
+                commande.Parameters.AddWithValue("mot_de_passe_", mot_de_passe);
+
+                con.Open();
+
+                commande.Prepare();
+                commande.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (MySqlException ex)
+            {
+                con.Close();
+            }
+        }
     }
 }

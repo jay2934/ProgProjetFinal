@@ -27,5 +27,11 @@ namespace projetFinal
         {
             this.InitializeComponent();
         }
+
+        private void btnAjouterAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            Singleton.getInstance().AjoutAdmin(txtBoxNomAdmin.Text, txtBoxMotDePasseAdmin.Text);
+            this.Frame.Navigate(typeof(Projets));
+        }
     }
 }

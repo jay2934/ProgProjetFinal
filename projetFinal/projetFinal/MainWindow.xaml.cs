@@ -65,5 +65,14 @@ namespace projetFinal
             }
 
         }
+
+        private void mainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            navEmployes.IsEnabled = true;
+            navClients.IsEnabled = true;
+            navProjets.IsEnabled = true;
+            navDeconnection.IsEnabled = true;
+            navConnexion.IsEnabled = true;
+        }
     }
 }

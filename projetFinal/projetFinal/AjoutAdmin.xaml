@@ -13,7 +13,7 @@
         <StackPanel HorizontalAlignment="Center"  Width="500" Background="LightGray" Height="250" Padding="30" BorderBrush="Gray" BorderThickness="2" CornerRadius="5">
             <TextBox x:Name="txtBoxNomAdmin" Header="Nom"/>
             <TextBox x:Name="txtBoxMotDePasseAdmin" Header="Mot de passe"/>
-            <Button x:Name="btnAjouterAdmin" Content="Créer l'admin" HorizontalAlignment="Center" Margin="15"/>
+            <Button x:Name="btnAjouterAdmin" Content="Créer l'admin" HorizontalAlignment="Center" Margin="15" Click="btnAjouterAdmin_Click"/>
         </StackPanel>
     </Grid>
 </Page>
