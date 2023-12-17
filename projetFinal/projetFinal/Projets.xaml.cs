@@ -27,15 +27,22 @@ namespace projetFinal
         {
             this.InitializeComponent();
             gridViewProjets.ItemsSource = SingletonProjet.getInstance().GetListeProjet();
+            if(Connexion.Connecter == false)
+            {
+                btnAjouterProjet.Visibility = Visibility.Collapsed;
+            }
         }
-        private async void btnAjouterProjet_Click(object sender, RoutedEventArgs e)
+
+
+
+        private void btnAjouterProjet_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void gridViewProjets_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void btnRefreshProjet_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Projets));
         }
     }
 }

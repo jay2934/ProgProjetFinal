@@ -31,11 +31,11 @@ namespace projetFinal
             employeModifiable = SingletonEmploye.getInstance().getEmploye(position); //Prendre l'employé dans la liste qu'on veux modifier
 
             txtBoxNomEmploye.Text = employeModifiable.Nom; //Remplir les textBox avec les valeurs de cet employé
-            txtBoxPrenomEmploye.Text= employeModifiable.Prenom;
+            txtBoxPrenomEmploye.Text = employeModifiable.Prenom;
             txtBoxEmailEmploye.Text = employeModifiable.Email;
             txtBoxAdresseEmploye.Text = employeModifiable.Adresse;
             txtBoxPhotoEmploye.Text = employeModifiable.Photo;
-            nbBoxTauxHoraireEmploye.Value = (double) employeModifiable.Taux_horaire;
+            nbBoxTauxHoraireEmploye.Value = (double)employeModifiable.Taux_horaire;
 
             int troisans = 1095; // 3 ans en jours
             DateTime aujourdhuiDate = DateTime.Now;
@@ -43,47 +43,130 @@ namespace projetFinal
 
             int differenceJour = (int)(aujourdhuiDate - employeDateEmbauche).TotalDays;
 
-            if(differenceJour < 1095)
+            if (differenceJour < 1095)
             {
-                btnPermanent.Visibility= Visibility.Collapsed;
+                btnPermanent.Visibility = Visibility.Collapsed;
             }
 
-            if(employeModifiable.Statut.Equals("Permanent"))
+            if (employeModifiable.Statut.Equals("Permanent"))
             {
-                btnPermanent.IsEnabled= false;
+                btnPermanent.IsEnabled = false;
             }
         }
-        
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            decimal tauxhoraire = (decimal)nbBoxTauxHoraireEmploye.Value;
+            bool invalide = false;
 
-
-            Employe employeModifier = new Employe( //Créer un nouvel employé avec les données entrées
-                employeModifiable.Matriulce,
-                txtBoxNomEmploye.Text,
-                txtBoxPrenomEmploye.Text,
-                employeModifiable.Date_naissance,
-                txtBoxEmailEmploye.Text,
-                txtBoxAdresseEmploye.Text,
-                employeModifiable.Date_embauche,
-                txtBoxPhotoEmploye.Text,
-                statutEmploye,
-                tauxhoraire
-            );
-
-            SingletonEmploye.getInstance().ModifierEmploye( //Modifier l'employé avec ce nouvel employé
-                employeModifier.Matriulce,
-                employeModifier.Nom,
-                employeModifier.Prenom,
-                employeModifier.Email,
-                employeModifier.Adresse,
-                employeModifier.Taux_horaire,
-                employeModifier.Photo
-            );
-            if(checkBtnPermanent == true ) 
+            if (txtBoxNomEmploye.Text.Equals(""))
             {
-                SingletonEmploye.getInstance().ModifierStatutEmploye(employeModifier.Matriulce, statutEmploye);
+                invalide = true;
+                args.Cancel = true;
+                headNomEmploye.Text = "* (Le nom ne doit pas être vide)";
+            }
+            else
+            {
+                headNomEmploye.Text = "";
+            }
+
+            if (txtBoxPrenomEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headPrenomEmploye.Text = "* (Le prénom ne doit pas être vide)";
+            }
+            else
+            {
+                headPrenomEmploye.Text = "";
+            }
+
+            if (txtBoxEmailEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headEmailEmploye.Text = "* (L'adresse mail ne doit pas être vide)";
+            }
+            else if (!txtBoxEmailEmploye.Text.Contains("@"))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headEmailEmploye.Text = "* (L'adresse mail doit avoir un '@')";
+            }
+            else if (!txtBoxEmailEmploye.Text.Substring(txtBoxEmailEmploye.Text.IndexOf("@")).Contains("."))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headEmailEmploye.Text = "* (L'adresse mail doit avoir un domaine)";
+            }
+            else
+            {
+                headEmailEmploye.Text = "";
+            }
+
+            if (txtBoxAdresseEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headAdresseEmploye.Text = "* (L'adresse ne doit pas être vide)";
+            }
+            else
+            {
+                headAdresseEmploye.Text = "";
+            }
+
+            if (nbBoxTauxHoraireEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headTauxHoraireEmploye.Text = "* (Le taux horaire ne doit pas être vide)";
+            }
+            else
+            {
+                headTauxHoraireEmploye.Text = "";
+            }
+
+            if (txtBoxPhotoEmploye.Text.Equals(""))
+            {
+                invalide = true;
+                args.Cancel = true;
+                headPhotoEmploye.Text = "* (La photo ne doit pas être vide)";
+            }
+            else
+            {
+                headPhotoEmploye.Text = "";
+            }
+
+            if (invalide == false)
+            {
+                decimal tauxhoraire = (decimal)nbBoxTauxHoraireEmploye.Value;
+
+
+                Employe employeModifier = new Employe( //Créer un nouvel employé avec les données entrées
+                    employeModifiable.Matriulce,
+                    txtBoxNomEmploye.Text,
+                    txtBoxPrenomEmploye.Text,
+                    employeModifiable.Date_naissance,
+                    txtBoxEmailEmploye.Text,
+                    txtBoxAdresseEmploye.Text,
+                    employeModifiable.Date_embauche,
+                    txtBoxPhotoEmploye.Text,
+                    statutEmploye,
+                    tauxhoraire
+                );
+
+                SingletonEmploye.getInstance().ModifierEmploye( //Modifier l'employé avec ce nouvel employé
+                    employeModifier.Matriulce,
+                    employeModifier.Nom,
+                    employeModifier.Prenom,
+                    employeModifier.Email,
+                    employeModifier.Adresse,
+                    employeModifier.Taux_horaire,
+                    employeModifier.Photo
+                );
+                if (checkBtnPermanent == true)
+                {
+                    SingletonEmploye.getInstance().ModifierStatutEmploye(employeModifier.Matriulce, statutEmploye);
+                }
+                args.Cancel = false;
             }
         }
 

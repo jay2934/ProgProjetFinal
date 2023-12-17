@@ -48,7 +48,7 @@ namespace projetFinal
             var item = e.ClickedItem;
             int position = gridViewEmployes.Items.IndexOf(item);
 
-            if (position != -1)
+            if (position != -1 && Connexion.Connecter == true)
             {
                 // Assuming ModificationEmploye is a ContentDialog
                 ModificationEmploye dialog = new ModificationEmploye(position);
