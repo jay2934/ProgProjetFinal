@@ -30,9 +30,49 @@ namespace projetFinal
 
         private void btnAjouterAdmin_Click(object sender, RoutedEventArgs e)
         {
-            Singleton.getInstance().AjoutAdmin(txtBoxNomAdmin.Text, txtBoxMotDePasseAdmin.Text);
-            Connexion.Connecter = true;
-            this.Frame.Navigate(typeof(Projets));
+            bool invalide = false;
+
+            if (txtBoxNomAdmin.Text.Equals(""))
+            {
+                invalide = true;
+                headNomAdmin.Text = "* (Le nom ne doit pas être vide)";
+            }
+            else
+            {
+                headNomAdmin.Text = "";
+            }
+
+            if (txtBoxMotDePasseAdmin.Text.Equals(""))
+            {
+                invalide = true;
+                headMotDePasseAdmin.Text = "* (Le mot de passe ne doit pas être vide)";
+            }
+            else if (txtBoxMotDePasseAdmin.Text.Equals(txtBoxNomAdmin.Text))
+            {
+                invalide = true;
+                headMotDePasseAdmin.Text = "* (Le mot de passe ne peut pas être votre nom)";
+            }
+            else if (txtBoxMotDePasseAdmin.Text.Length < 8 || txtBoxMotDePasseAdmin.Text.Length > 25)
+            {
+                invalide = true;
+                headMotDePasseAdmin.Text = "* (Le mot de passe doit contenir entre 8 et 25 charactères)";
+            }
+            else if (!txtBoxMotDePasseAdmin.Text.Contains('0') && !txtBoxMotDePasseAdmin.Text.Contains('1') && !txtBoxMotDePasseAdmin.Text.Contains('2') && !txtBoxMotDePasseAdmin.Text.Contains('3') && !txtBoxMotDePasseAdmin.Text.Contains('4') && !txtBoxMotDePasseAdmin.Text.Contains('5') && !txtBoxMotDePasseAdmin.Text.Contains('6') && !txtBoxMotDePasseAdmin.Text.Contains('7') && !txtBoxMotDePasseAdmin.Text.Contains('8') && !txtBoxMotDePasseAdmin.Text.Contains('9'))
+            {
+                invalide = true;
+                headMotDePasseAdmin.Text = "* (Le mot de passe doit contenir au moins un chiffre)";
+            }
+            else
+            {
+                headMotDePasseAdmin.Text = "";
+            }
+
+            if (invalide == false)
+            {
+                Singleton.getInstance().AjoutAdmin(txtBoxNomAdmin.Text, txtBoxMotDePasseAdmin.Text);
+                Connexion.Connecter = true;
+                this.Frame.Navigate(typeof(Projets));
+            }
         }
     }
 }

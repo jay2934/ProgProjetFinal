@@ -66,8 +66,13 @@ namespace projetFinal
             
             if(Singleton.getInstance().CheckAdmin().Nom == nom && Singleton.getInstance().CheckAdmin().Mot_de_passe == GetSha1(mdp))
             {
+                
                 Connexion.connecter = true;
                 this.Frame.Navigate(typeof(Projets));
+            }
+            else
+            {
+                headConAdmin.Text = "* (Le Nom ou le Mot de passe est invalide)";
             }
         }
     }

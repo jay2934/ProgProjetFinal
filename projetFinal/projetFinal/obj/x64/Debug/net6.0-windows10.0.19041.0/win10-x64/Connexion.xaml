@@ -10,10 +10,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid>
-        <StackPanel HorizontalAlignment="Center"  Width="500" Background="LightGray" Height="250" Padding="30" BorderBrush="Gray" BorderThickness="2" CornerRadius="5">
-            <TextBox x:ConnectionId='2' x:Name="txtBoxNomAdmin" Header="Nom"/>
-            <TextBox x:ConnectionId='3' x:Name="txtBoxMotDePasseAdmin" Header="Mot de passe"/>
-            <Button x:ConnectionId='4' x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Center" Margin="15"                           />
+        <StackPanel HorizontalAlignment="Center"  Width="500" Background="LightGray" Height="275" Padding="30" BorderBrush="Gray" BorderThickness="2" CornerRadius="5">
+            <TextBlock x:ConnectionId='2' x:Name="headConAdmin" Foreground="Red"></TextBlock>
+            <TextBox x:ConnectionId='3' x:Name="txtBoxNomAdmin" Header="Nom"/>
+            <TextBox x:ConnectionId='4' x:Name="txtBoxMotDePasseAdmin" Header="Mot de passe"/>
+            <Button x:ConnectionId='5' x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Center" Margin="15"                           />
         </StackPanel>
     </Grid>
 </Page>

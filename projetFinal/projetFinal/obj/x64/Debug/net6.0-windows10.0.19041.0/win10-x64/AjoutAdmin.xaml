@@ -11,8 +11,22 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Center"  Width="500" Background="LightGray" Height="250" Padding="30" BorderBrush="Gray" BorderThickness="2" CornerRadius="5">
-            <TextBox x:ConnectionId='2' x:Name="txtBoxNomAdmin" Header="Nom"/>
-            <TextBox x:ConnectionId='3' x:Name="txtBoxMotDePasseAdmin" Header="Mot de passe"/>
+            <TextBox x:ConnectionId='2' x:Name="txtBoxNomAdmin">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Nom</TextBlock>
+                        <TextBlock x:ConnectionId='6' x:Name="headNomAdmin" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+            <TextBox x:ConnectionId='3' x:Name="txtBoxMotDePasseAdmin">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Mot de passe</TextBlock>
+                        <TextBlock x:ConnectionId='5' x:Name="headMotDePasseAdmin" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
             <Button x:ConnectionId='4' x:Name="btnAjouterAdmin" Content="Créer l'admin" HorizontalAlignment="Center" Margin="15"                              />
         </StackPanel>
     </Grid>
