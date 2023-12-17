@@ -28,13 +28,14 @@ namespace projetFinal
         {
             this.InitializeComponent();
 
-            employeModifiable = SingletonEmploye.getInstance().getEmploye(position);
+            employeModifiable = SingletonEmploye.getInstance().getEmploye(position); //Prendre l'employé dans la liste qu'on veux modifier
 
-            txtBoxNomEmploye.Text = employeModifiable.Nom;
+            txtBoxNomEmploye.Text = employeModifiable.Nom; //Remplir les textBox avec les valeurs de cet employé
             txtBoxPrenomEmploye.Text= employeModifiable.Prenom;
             txtBoxEmailEmploye.Text = employeModifiable.Email;
             txtBoxAdresseEmploye.Text = employeModifiable.Adresse;
             txtBoxPhotoEmploye.Text = employeModifiable.Photo;
+            nbBoxTauxHoraireEmploye.Value = (double) employeModifiable.Taux_horaire;
 
             int troisans = 1095; // 3 ans en jours
             DateTime aujourdhuiDate = DateTime.Now;
@@ -58,7 +59,7 @@ namespace projetFinal
             decimal tauxhoraire = (decimal)nbBoxTauxHoraireEmploye.Value;
 
 
-            Employe employeModifier = new Employe(
+            Employe employeModifier = new Employe( //Créer un nouvel employé avec les données entrées
                 employeModifiable.Matriulce,
                 txtBoxNomEmploye.Text,
                 txtBoxPrenomEmploye.Text,
@@ -71,7 +72,7 @@ namespace projetFinal
                 tauxhoraire
             );
 
-            SingletonEmploye.getInstance().ModifierEmploye(
+            SingletonEmploye.getInstance().ModifierEmploye( //Modifier l'employé avec ce nouvel employé
                 employeModifier.Matriulce,
                 employeModifier.Nom,
                 employeModifier.Prenom,

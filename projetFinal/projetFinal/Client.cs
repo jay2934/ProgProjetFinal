@@ -11,6 +11,7 @@ namespace projetFinal
         string nom, adresse, no_telephone, email;
         int identifiant;
         public Client() {
+
             identifiant = 000;
             nom = "Client";
             adresse = "123 Rue principal";

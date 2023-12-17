@@ -13,12 +13,12 @@ namespace projetFinal
     {
         static SingletonProjet instance = null;
         MySqlConnection con;
-        ObservableCollection<Projet> liste;
+        ObservableCollection<ProjetClient> liste;
 
         public SingletonProjet()
         {
             con = new MySqlConnection("Server=cours.cegep3r.info;Database=a2023_420325ri_fabeq12;Uid=2266983;Pwd=2266983;");
-            liste = new ObservableCollection<Projet>();
+            liste = new ObservableCollection<ProjetClient>();
         }
 
         public static SingletonProjet getInstance()
@@ -29,12 +29,12 @@ namespace projetFinal
             return instance;
         }
 
-        public ObservableCollection<Projet> GetListeProjet()
+        public ObservableCollection<ProjetClient> GetListeProjet()
         {
             liste.Clear();
             try
             {
-                MySqlCommand commande = new MySqlCommand("p_afficher_projets");
+                MySqlCommand commande = new MySqlCommand("p_afficher_client_projet");
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
                 con.Open();
@@ -50,7 +50,13 @@ namespace projetFinal
                     decimal total_salaire = (decimal)r["total_salaire"];
                     int client = (int)r["client"];
                     string statut = (string)r["statut"];
-                    Projet projet = new Projet(no_projet, titre, date_debut, description, budget, nb_employe, total_salaire, client, statut);
+                    int identifiant = (int)r["identifiant"];
+                    string nom = (string)r["nom"];
+                    string adresse = (string)r["adresse"];
+                    string no_telephone = (string)r["no_telephone"];
+                    string email = (string)r["email"];
+
+                    ProjetClient projet = new ProjetClient(no_projet, titre, date_debut, description, budget, nb_employe, total_salaire, client, statut, identifiant, nom, adresse, no_telephone, email);
 
                     liste.Add(projet);
                 }
