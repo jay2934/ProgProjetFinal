@@ -74,11 +74,22 @@ namespace projetFinal
 
         private void mainFrame_Navigated(object sender, NavigationEventArgs e)
         {
-            navEmployes.IsEnabled = true;
+            navEmployes.IsEnabled = true; //Quand on navigue entre chaque page: réactiver les items du navigationview (utile quand l'on a fini de créer l'admin)
             navClients.IsEnabled = true;
             navProjets.IsEnabled = true;
             navDeconnection.IsEnabled = true;
-            navConnexion.IsEnabled = true;   
+            navConnexion.IsEnabled = true;
+
+            if(Connexion.Connecter == true)
+            {
+                navConnexion.IsEnabled = false;
+                
+            }
+            else
+            {
+                navConnexion.IsEnabled = true;
+                navDeconnection.IsEnabled = false;
+            }
         }
     }
 }
