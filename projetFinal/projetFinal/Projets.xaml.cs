@@ -35,9 +35,15 @@ namespace projetFinal
 
 
 
-        private void btnAjouterProjet_Click(object sender, RoutedEventArgs e)
+        private async void btnAjouterProjet_Click(object sender, RoutedEventArgs e)
         {
+            AjouterProjet dialog = new AjouterProjet();
+            dialog.XamlRoot = GridProjet.XamlRoot;
+            dialog.Title = "Ajout d'un projet";
+            dialog.PrimaryButtonText = "Ajouter";
+            dialog.CloseButtonText = "Annuler";
 
+            ContentDialogResult resultat = await dialog.ShowAsync();
         }
 
         private void btnRefreshProjet_Click(object sender, RoutedEventArgs e)

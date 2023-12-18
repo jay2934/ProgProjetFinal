@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentDialog
+    x:Class="projetFinal.AjouterProjet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <AutoSuggestBox TextChanged="AutoSuggestBox_TextChanged" SuggestionChosen="AutoSuggestBox_SuggestionChosen" AutomationProperties.Name="tbxClientProjet"/>
+            <AutoSuggestBox x:Name="lvClients">
+                <AutoSuggestBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Client</TextBlock>
+                        <TextBlock x:Name="headlvClients" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </AutoSuggestBox.Header>
+            </AutoSuggestBox>
+
+            <TextBox x:Name="tbxTitreProjet">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Titre</TextBlock>
+                        <TextBlock x:Name="headTitreProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <DatePicker x:Name="tbxDateProjet">
+                <DatePicker.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Date de début</TextBlock>
+                        <TextBlock x:Name="headDateProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </DatePicker.Header>
+            </DatePicker>
+
+            <TextBox x:Name="tbxBudgetProjet">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">budget</TextBlock>
+                        <TextBlock x:Name="headBudgetProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <TextBox x:Name="tbxNbrEmployeProjet">
+                <TextBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">nombre d'employé</TextBlock>
+                        <TextBlock x:Name="headNbrEmployeProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+
+            <DatePicker x:Name="tbxSalaireProjet">
+                <DatePicker.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">total des salaires</TextBlock>
+                        <TextBlock x:Name="headSalaireProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </DatePicker.Header>
+            </DatePicker>
+
+            <NumberBox x:Name="tbxDescriptionProjet" Value="15.25" SpinButtonPlacementMode="Compact" SmallChange=".25" Minimum="15.25" LargeChange="1">
+                <NumberBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Description</TextBlock>
+                        <TextBlock x:Name="headDescriptionProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </NumberBox.Header>
+            </NumberBox>
+        </StackPanel>
+    </Grid>
+</ContentDialog>

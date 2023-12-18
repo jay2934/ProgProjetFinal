@@ -224,7 +224,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[50];
+            _typeNameTable = new string[51];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -248,35 +248,36 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             _typeNameTable[20] = "projetFinal.AjouterEmploye";
             _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.ContentDialog";
             _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[23] = "projetFinal.Clients";
-            _typeNameTable[24] = "projetFinal.Connexion";
-            _typeNameTable[25] = "projetFinal.Deconnexion";
-            _typeNameTable[26] = "projetFinal.Employes";
-            _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.NavigationView";
-            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode";
-            _typeNameTable[29] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.AutoSuggestBox";
-            _typeNameTable[31] = "Microsoft.UI.Xaml.UIElement";
-            _typeNameTable[32] = "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode";
-            _typeNameTable[33] = "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible";
-            _typeNameTable[34] = "Microsoft.UI.Xaml.Style";
-            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.StyleSelector";
-            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus";
-            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled";
-            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings";
-            _typeNameTable[41] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.NavigationViewItem";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.NavigationViewItemBase";
-            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.IconElement";
-            _typeNameTable[45] = "Microsoft.UI.Xaml.Controls.InfoBadge";
-            _typeNameTable[46] = "projetFinal.MainWindow";
-            _typeNameTable[47] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[48] = "projetFinal.ModificationEmploye";
-            _typeNameTable[49] = "projetFinal.Projets";
+            _typeNameTable[23] = "projetFinal.AjouterProjet";
+            _typeNameTable[24] = "projetFinal.Clients";
+            _typeNameTable[25] = "projetFinal.Connexion";
+            _typeNameTable[26] = "projetFinal.Deconnexion";
+            _typeNameTable[27] = "projetFinal.Employes";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.NavigationView";
+            _typeNameTable[29] = "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode";
+            _typeNameTable[30] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[31] = "Microsoft.UI.Xaml.Controls.AutoSuggestBox";
+            _typeNameTable[32] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[33] = "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode";
+            _typeNameTable[34] = "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible";
+            _typeNameTable[35] = "Microsoft.UI.Xaml.Style";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.StyleSelector";
+            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings";
+            _typeNameTable[42] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.NavigationViewItem";
+            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.NavigationViewItemBase";
+            _typeNameTable[45] = "Microsoft.UI.Xaml.Controls.IconElement";
+            _typeNameTable[46] = "Microsoft.UI.Xaml.Controls.InfoBadge";
+            _typeNameTable[47] = "projetFinal.MainWindow";
+            _typeNameTable[48] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[49] = "projetFinal.ModificationEmploye";
+            _typeNameTable[50] = "projetFinal.Projets";
 
-            _typeTable = new global::System.Type[50];
+            _typeTable = new global::System.Type[51];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -300,33 +301,34 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             _typeTable[20] = typeof(global::projetFinal.AjouterEmploye);
             _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.ContentDialog);
             _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
-            _typeTable[23] = typeof(global::projetFinal.Clients);
-            _typeTable[24] = typeof(global::projetFinal.Connexion);
-            _typeTable[25] = typeof(global::projetFinal.Deconnexion);
-            _typeTable[26] = typeof(global::projetFinal.Employes);
-            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationView);
-            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode);
-            _typeTable[29] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.AutoSuggestBox);
-            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.UIElement);
-            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode);
-            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible);
-            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Style);
-            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
-            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus);
-            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled);
-            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings);
-            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItem);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase);
-            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
-            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge);
-            _typeTable[46] = typeof(global::projetFinal.MainWindow);
-            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[48] = typeof(global::projetFinal.ModificationEmploye);
-            _typeTable[49] = typeof(global::projetFinal.Projets);
+            _typeTable[23] = typeof(global::projetFinal.AjouterProjet);
+            _typeTable[24] = typeof(global::projetFinal.Clients);
+            _typeTable[25] = typeof(global::projetFinal.Connexion);
+            _typeTable[26] = typeof(global::projetFinal.Deconnexion);
+            _typeTable[27] = typeof(global::projetFinal.Employes);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationView);
+            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode);
+            _typeTable[30] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Controls.AutoSuggestBox);
+            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode);
+            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible);
+            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Style);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
+            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings);
+            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItem);
+            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase);
+            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
+            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge);
+            _typeTable[47] = typeof(global::projetFinal.MainWindow);
+            _typeTable[48] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[49] = typeof(global::projetFinal.ModificationEmploye);
+            _typeTable[50] = typeof(global::projetFinal.Projets);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -365,16 +367,17 @@ namespace projetFinal.projetFinal_XamlTypeInfo
         private object Activate_4_AjoutAdmin() { return new global::projetFinal.AjoutAdmin(); }
         private object Activate_7_NumberBox() { return new global::Microsoft.UI.Xaml.Controls.NumberBox(); }
         private object Activate_20_AjouterEmploye() { return new global::projetFinal.AjouterEmploye(); }
-        private object Activate_23_Clients() { return new global::projetFinal.Clients(); }
-        private object Activate_24_Connexion() { return new global::projetFinal.Connexion(); }
-        private object Activate_25_Deconnexion() { return new global::projetFinal.Deconnexion(); }
-        private object Activate_26_Employes() { return new global::projetFinal.Employes(); }
-        private object Activate_27_NavigationView() { return new global::Microsoft.UI.Xaml.Controls.NavigationView(); }
-        private object Activate_40_NavigationViewTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings(); }
-        private object Activate_42_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
-        private object Activate_45_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
-        private object Activate_46_MainWindow() { return new global::projetFinal.MainWindow(); }
-        private object Activate_49_Projets() { return new global::projetFinal.Projets(); }
+        private object Activate_23_AjouterProjet() { return new global::projetFinal.AjouterProjet(); }
+        private object Activate_24_Clients() { return new global::projetFinal.Clients(); }
+        private object Activate_25_Connexion() { return new global::projetFinal.Connexion(); }
+        private object Activate_26_Deconnexion() { return new global::projetFinal.Deconnexion(); }
+        private object Activate_27_Employes() { return new global::projetFinal.Employes(); }
+        private object Activate_28_NavigationView() { return new global::Microsoft.UI.Xaml.Controls.NavigationView(); }
+        private object Activate_41_NavigationViewTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings(); }
+        private object Activate_43_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
+        private object Activate_46_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
+        private object Activate_47_MainWindow() { return new global::projetFinal.MainWindow(); }
+        private object Activate_50_Projets() { return new global::projetFinal.Projets(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -382,7 +385,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_29_IList(object instance, object item)
+        private void VectorAdd_30_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
@@ -533,37 +536,44 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  projetFinal.Clients
-                userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_23_Clients;
+            case 23:   //  projetFinal.AjouterProjet
+                userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_23_AjouterProjet;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  projetFinal.Connexion
+            case 24:   //  projetFinal.Clients
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_24_Connexion;
+                userType.Activator = Activate_24_Clients;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 25:   //  projetFinal.Deconnexion
+            case 25:   //  projetFinal.Connexion
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_25_Deconnexion;
+                userType.Activator = Activate_25_Connexion;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  projetFinal.Employes
+            case 26:   //  projetFinal.Deconnexion
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_26_Employes;
+                userType.Activator = Activate_26_Deconnexion;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 27:   //  Microsoft.UI.Xaml.Controls.NavigationView
+            case 27:   //  projetFinal.Employes
+                userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_27_Employes;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 28:   //  Microsoft.UI.Xaml.Controls.NavigationView
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_27_NavigationView;
+                userType.Activator = Activate_28_NavigationView;
                 userType.AddMemberName("PaneDisplayMode");
                 userType.AddMemberName("PaneTitle");
                 userType.AddMemberName("IsSettingsVisible");
@@ -604,7 +614,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 28:   //  Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode
+            case 29:   //  Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Auto);
                 userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left);
@@ -614,22 +624,22 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 29:   //  System.Collections.Generic.IList`1<Object>
+            case 30:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_29_IList;
+                userType.CollectionAdd = VectorAdd_30_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 30:   //  Microsoft.UI.Xaml.Controls.AutoSuggestBox
+            case 31:   //  Microsoft.UI.Xaml.Controls.AutoSuggestBox
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 31:   //  Microsoft.UI.Xaml.UIElement
+            case 32:   //  Microsoft.UI.Xaml.UIElement
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 32:   //  Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode
+            case 33:   //  Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Minimal", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Minimal);
                 userType.AddEnumValue("Compact", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Compact);
@@ -637,7 +647,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 33:   //  Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible
+            case 34:   //  Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Collapsed", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Collapsed);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Visible);
@@ -645,33 +655,33 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 34:   //  Microsoft.UI.Xaml.Style
+            case 35:   //  Microsoft.UI.Xaml.Style
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 35:   //  Microsoft.UI.Xaml.Controls.StyleSelector
+            case 36:   //  Microsoft.UI.Xaml.Controls.StyleSelector
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 36:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
+            case 37:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 37:   //  Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode
+            case 38:   //  Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("MoreLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.MoreLabel);
                 userType.AddEnumValue("NoLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.NoLabel);
                 xamlType = userType;
                 break;
 
-            case 38:   //  Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus
+            case 39:   //  Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Disabled);
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Enabled);
                 xamlType = userType;
                 break;
 
-            case 39:   //  Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled
+            case 40:   //  Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("WhenSelectionFollowsFocus", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.WhenSelectionFollowsFocus);
                 userType.AddEnumValue("Always", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.Always);
@@ -679,19 +689,19 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 40:   //  Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings
+            case 41:   //  Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 41:   //  Microsoft.UI.Xaml.DependencyObject
+            case 42:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 42:   //  Microsoft.UI.Xaml.Controls.NavigationViewItem
+            case 43:   //  Microsoft.UI.Xaml.Controls.NavigationViewItem
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItemBase"));
-                userType.Activator = Activate_42_NavigationViewItem;
+                userType.Activator = Activate_43_NavigationViewItem;
                 userType.AddMemberName("Icon");
                 userType.AddMemberName("CompactPaneLength");
                 userType.AddMemberName("HasUnrealizedChildren");
@@ -704,42 +714,42 @@ namespace projetFinal.projetFinal_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemBase
+            case 44:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemBase
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
                 userType.AddMemberName("IsSelected");
                 xamlType = userType;
                 break;
 
-            case 44:   //  Microsoft.UI.Xaml.Controls.IconElement
+            case 45:   //  Microsoft.UI.Xaml.Controls.IconElement
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 45:   //  Microsoft.UI.Xaml.Controls.InfoBadge
+            case 46:   //  Microsoft.UI.Xaml.Controls.InfoBadge
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 46:   //  projetFinal.MainWindow
+            case 47:   //  projetFinal.MainWindow
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_46_MainWindow;
+                userType.Activator = Activate_47_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 47:   //  Microsoft.UI.Xaml.Window
+            case 48:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 48:   //  projetFinal.ModificationEmploye
+            case 49:   //  projetFinal.ModificationEmploye
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentDialog"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 49:   //  projetFinal.Projets
+            case 50:   //  projetFinal.Projets
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_49_Projets;
+                userType.Activator = Activate_50_Projets;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

@@ -29,6 +29,7 @@ namespace projetFinal
             return instance;
         }
 
+
         public ObservableCollection<ProjetClient> GetListeProjet()
         {
             liste.Clear();
