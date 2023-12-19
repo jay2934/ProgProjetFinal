@@ -14,6 +14,7 @@
                 <NavigationViewItem Content="Employés" x:Name="navEmployes" Icon="People"/>
                 <NavigationViewItem Content="Clients" x:Name="navClients" Icon="Shop"/>
                 <NavigationViewItem Content="Projets" x:Name="navProjets" Icon="Library"/>
+                <NavigationViewItem Content="Exporter" x:Name="navExporter" Icon="Save"/>
             </NavigationView.MenuItems>
             <NavigationView.FooterMenuItems>
                 <NavigationViewItem Content="Connexion" x:Name="navConnexion" Icon="Account"/>

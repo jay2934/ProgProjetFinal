@@ -69,6 +69,46 @@ namespace projetFinal
             return liste;
         }
 
+        public ObservableCollection<Employe> GetListeEmployeNonAttribue()
+        {
+            liste.Clear();
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_afficher_employes_non_attribue");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+                while (r.Read())
+                {
+                    string matricule = (string)r["matricule"];
+                    string nom = (string)r["nom"];
+                    string prenom = (string)r["prenom"];
+                    string date_naissance = Convert.ToString(r["date_naissance"]);
+                    date_naissance = date_naissance.Remove(10);
+                    string email = (string)r["email"];
+                    string adresse = (string)r["adresse"];
+                    string date_embauche = Convert.ToString(r["date_embauche"]);
+                    date_embauche = date_embauche.Remove(10);
+                    decimal taux_horaire = (decimal)r["taux_horaire"];
+                    string photo = (string)r["photo"];
+                    string statut = (string)r["statut"];
+                    Employe employe = new Employe(matricule, nom, prenom, date_naissance, email, adresse, date_embauche, photo, statut, taux_horaire);
+
+                    liste.Add(employe);
+                }
+
+                r.Close();
+                con.Close();
+            }
+            catch (MySqlException ex)
+            {
+                con.Close();
+            }
+
+            return liste;
+        }
+
         public void AjoutEmploye(string nom, string prenom, string date_naissance, string email, string adresse, string date_embauche, decimal taux_horaire, string photo, string statut)
         {
             try

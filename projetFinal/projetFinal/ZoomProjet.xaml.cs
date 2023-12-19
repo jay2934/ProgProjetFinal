@@ -46,13 +46,25 @@ namespace projetFinal
         public ZoomProjet()
         {
             this.InitializeComponent();
-
+            if(Connexion.Connecter == false)
+            {
+                btnAttribueEmploye.Visibility = Visibility.Collapsed;
+                nb_heure.Visibility = Visibility.Collapsed;
+                autoSuggBoxEmploye.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                btnAttribueEmploye.Visibility = Visibility.Visible;
+                nb_heure.Visibility = Visibility.Visible;
+                autoSuggBoxEmploye.Visibility = Visibility.Visible;
+            }
 
         }
 
         private void btnAttribueEmploye_Click(object sender, RoutedEventArgs e)
         {
             bool invalide = true;
+            int nbr = 0;
 
             if (autoSuggBoxEmploye.Text.Equals(""))
             {
@@ -62,10 +74,9 @@ namespace projetFinal
             else
             {
                 var suitableItems = new List<string>();
-                var employes = SingletonEmploye.getInstance().GetListeEmploye();
+                var employes = SingletonEmploye.getInstance().GetListeEmployeNonAttribue();
                 foreach (var employe in employes)
                 {
-
                     var employeNom = employe.Nom;
 
                     if (autoSuggBoxEmploye.Text.Equals(employeNom))
@@ -73,6 +84,7 @@ namespace projetFinal
                         invalide = false;
                         break;
                     }
+                    nbr++;
                 }
                 if (invalide)
                 {
@@ -84,6 +96,16 @@ namespace projetFinal
                 }
             }
 
+            if (nb_heure.Text.Equals(""))
+            {
+                invalide = true;
+                headNbHeureProjet.Text = "* (Nombre d'heure requis)";
+            }
+            else
+            {
+                headNbHeureProjet.Text = "";
+            }
+
             if (invalide == false)
             {
                 string matricule, no_projet;
@@ -92,8 +114,10 @@ namespace projetFinal
 
                 matricule = SingletonTravaille.getInstance().getNoEmploye(autoSuggBoxEmploye.Text);
                 no_projet = tblno_projet.Text;
+                nb_heure_travaille = (int)nb_heure.Value;
+                salaire = (int)nb_heure.Value * SingletonEmploye.getInstance().getEmploye(nbr).Taux_horaire;
 
-                //SingletonTravaille.getInstance().AjoutTravaille(matricule, no_projet, nb_heure_travaille, salaire);
+                SingletonTravaille.getInstance().AjoutTravaille(matricule, no_projet, nb_heure_travaille, salaire);
             }
         }
         private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
@@ -104,7 +128,7 @@ namespace projetFinal
                 var splitText = sender.Text.ToLower().Split(" ");
 
 
-                var employes = SingletonEmploye.getInstance().GetListeEmploye();
+                var employes = SingletonEmploye.getInstance().GetListeEmployeNonAttribue();
 
                 foreach (var employe in employes)
                 {

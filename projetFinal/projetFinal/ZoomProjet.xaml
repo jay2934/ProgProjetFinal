@@ -71,5 +71,49 @@
                 <TextBlock x:Name="tblstatut" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
             </StackPanel>
         </StackPanel>
+        <StackPanel>
+            
+        <GridView x:Name="gridviewEmployeProjet">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Employe">
+                    <StackPanel Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="330">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="{x:Bind Matriulce}" FontWeight="Bold" FontSize="20"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{x:Bind Nom}" FontWeight="SemiBold" FontSize="18"/>
+                                    <TextBlock Text="{x:Bind Prenom}" FontWeight="SemiBold" FontSize="18" Padding="3 0 0 0"/>
+                                </StackPanel>
+                                <TextBlock Text="{x:Bind Date_naissance}"/>
+                                <TextBlock Text="{x:Bind Email}"/>
+                                <TextBlock Text="{x:Bind Adresse}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
+                                <Image Source="{x:Bind Photo}" MaxWidth="90"/>
+                            </StackPanel>
+                        </Grid>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Embauché le"/>
+                                <TextBlock Text="{x:Bind Date_embauche}" Padding="3 0 0 0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind Taux_horaire}" FontWeight="SemiBold"/>
+                                <TextBlock Text="$ de taux horaire" FontWeight="SemiBold"/>
+                            </StackPanel>
+                            <TextBlock Text="{x:Bind Statut}" FontWeight="Bold"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        </StackPanel>
     </Grid>
 </Page>

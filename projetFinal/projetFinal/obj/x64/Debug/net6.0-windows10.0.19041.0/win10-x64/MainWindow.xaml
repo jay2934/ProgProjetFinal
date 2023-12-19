@@ -14,12 +14,13 @@
                 <NavigationViewItem x:ConnectionId='4' Content="Employés" x:Name="navEmployes" Icon="People"/>
                 <NavigationViewItem x:ConnectionId='5' Content="Clients" x:Name="navClients" Icon="Shop"/>
                 <NavigationViewItem x:ConnectionId='6' Content="Projets" x:Name="navProjets" Icon="Library"/>
+                <NavigationViewItem x:ConnectionId='7' Content="Exporter" x:Name="navExporter" Icon="Save"/>
             </NavigationView.MenuItems>
             <NavigationView.FooterMenuItems>
-                <NavigationViewItem x:ConnectionId='7' Content="Connexion" x:Name="navConnexion" Icon="Account"/>
-                <NavigationViewItem x:ConnectionId='8' Content="Déconnection" x:Name="navDeconnection" Icon="Permissions"/>
+                <NavigationViewItem x:ConnectionId='8' Content="Connexion" x:Name="navConnexion" Icon="Account"/>
+                <NavigationViewItem x:ConnectionId='9' Content="Déconnection" x:Name="navDeconnection" Icon="Permissions"/>
             </NavigationView.FooterMenuItems>
-            <Frame x:ConnectionId='9' x:Name="mainFrame"                                />
+            <Frame x:ConnectionId='10' x:Name="mainFrame"                                />
         </NavigationView>
     </Grid>
 </Window>

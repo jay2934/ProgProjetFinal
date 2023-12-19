@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -44,8 +45,7 @@ namespace projetFinal
         }
 
 
-
-        private void navView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        private async void navView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             var item = (NavigationViewItem)args.SelectedItem;
 
@@ -66,6 +66,30 @@ namespace projetFinal
                 case "navDeconnection":
                     mainFrame.Navigate(typeof(Deconnexion));
                     break;
+                case "navExporter":
+                    var picker = new Windows.Storage.Pickers.FileSavePicker();
+
+                    var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+                    WinRT.Interop.InitializeWithWindow.Initialize(picker, hWnd);
+
+                    picker.SuggestedFileName = "Projets";
+                    picker.FileTypeChoices.Add("Fichier texte", new List<string>() { ".csv" });
+
+                    Windows.Storage.StorageFile monFichier = await picker.PickSaveFileAsync();
+
+                    List<Projet> liste = new List<Projet>();
+
+                    SingletonProjet singletonInstance = SingletonProjet.getInstance();
+
+                    ObservableCollection<Projet> observableCollection = singletonInstance.GetListeProj();
+
+                    List<Projet> projetList = observableCollection.ToList();
+
+                    liste.AddRange(projetList);
+
+                    if (monFichier != null)
+                        await Windows.Storage.FileIO.WriteLinesAsync(monFichier, liste.ConvertAll(x => x.stringCSV()), Windows.Storage.Streams.UnicodeEncoding.Utf8);
+                    break;
                 default:
                     break;
             }
@@ -80,15 +104,16 @@ namespace projetFinal
             navDeconnection.IsEnabled = true;
             navConnexion.IsEnabled = true;
 
-            if(Connexion.Connecter == true)
+            if (Connexion.Connecter == true)
             {
                 navConnexion.IsEnabled = false;
-                
+                navExporter.IsEnabled = true;
             }
             else
             {
                 navConnexion.IsEnabled = true;
                 navDeconnection.IsEnabled = false;
+                navExporter.IsEnabled = false;
             }
         }
     }

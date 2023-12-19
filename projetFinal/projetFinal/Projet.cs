@@ -101,5 +101,16 @@ namespace projetFinal
         {
             return $"No_projet = {no_projet} Titre = {titre} Date de début = {date_debut} Description = {description} Budget = {budget} Nombre d'employés {nb_employe} Total des salaires = {total_salaire} Client = {client} Statut = {statut}";
         }
+
+        public string stringCSV()
+        {
+
+            string formattedDate = DateTime.TryParse(date_debut, out DateTime parsedDate)
+                ? parsedDate.ToString("yyyy-MM-dd")
+                : "";
+
+            return $"{no_projet};{titre};{formattedDate};{description};{budget};{nb_employe};{total_salaire};{client};{statut}";
+        }
+
     }
 }

@@ -21,7 +21,6 @@
         <StackPanel Grid.Row="0" Background="DarkGray"  BorderBrush="DimGray" BorderThickness="3" Orientation="Horizontal">
             <Button x:Name="btnAjouterProjet" Click="btnAjouterProjet_Click" Content="Ajouter un projet" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
             <Button x:Name="btnRefreshProjet" Click="btnRefreshProjet_Click" Content="Rafraichir" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
-            <Button x:Name="btnExporterProjet" Click="btnExporterProjet_Click" Content="Exporter" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <StackPanel HorizontalAlignment="Center">

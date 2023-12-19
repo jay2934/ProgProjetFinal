@@ -58,7 +58,7 @@ namespace projetFinal
         {
             try
             {
-                MySqlCommand commande = new MySqlCommand("p_get_employes");
+                MySqlCommand commande = new MySqlCommand("p_get_no_matricule");
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
                 commande.Parameters.AddWithValue("nom_", nom);
@@ -66,14 +66,20 @@ namespace projetFinal
                 con.Open();
 
                 MySqlDataReader r = commande.ExecuteReader();
-                r.Read();
 
-                string matricule = (string)r["matricule"];
-
-                r.Close();
-                con.Close();
-
-                return matricule;
+                if (r.Read()) // Vérifier s'il y a des lignes de données à lire
+                {
+                    string matricule = (string)r["matricule"];
+                    r.Close();
+                    con.Close();
+                    return matricule;
+                }
+                else
+                {
+                    r.Close();
+                    con.Close();
+                    return "No data found"; // Ajustez le message selon vos besoins
+                }
             }
             catch (MySqlException ex)
             {
@@ -81,5 +87,6 @@ namespace projetFinal
                 return "error";
             }
         }
+
     }
 }
