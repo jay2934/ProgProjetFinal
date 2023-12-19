@@ -18,65 +18,63 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <ComboBox x:ConnectionId='2' x:Name="lvClients" Text="">
-                <ComboBox.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">Client</TextBlock>
-                        <TextBlock x:ConnectionId='15' x:Name="headlvClients" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </ComboBox.Header>
-            </ComboBox>
+            <AutoSuggestBox x:ConnectionId='2'                                         
+                                                                  
+                Width="300" AutomationProperties.Name="Basic AutoSuggestBox" 
+                Header="Client associé au projet" x:Name="autoSuggBoxClient"/>
 
             <TextBox x:ConnectionId='3' x:Name="tbxTitreProjet">
                 <TextBox.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">Titre</TextBlock>
-                        <TextBlock x:ConnectionId='14' x:Name="headTitreProjet" Foreground="Red"></TextBlock>
+                        <TextBlock x:ConnectionId='12' x:Name="headTitreProjet" Foreground="Red"></TextBlock>
                     </StackPanel>
                 </TextBox.Header>
             </TextBox>
+
 
             <DatePicker x:ConnectionId='4' x:Name="tbxDateProjet">
                 <DatePicker.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">Date de début</TextBlock>
-                        <TextBlock x:ConnectionId='13' x:Name="headDateProjet" Foreground="Red"></TextBlock>
+                        <TextBlock x:ConnectionId='11' x:Name="headDateProjet" Foreground="Red"></TextBlock>
                     </StackPanel>
                 </DatePicker.Header>
             </DatePicker>
 
-            <TextBox x:ConnectionId='5' x:Name="tbxBudgetProjet">
+            <TextBox x:ConnectionId='5' x:Name="tbxDescriptionProjet">
                 <TextBox.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">budget</TextBlock>
-                        <TextBlock x:ConnectionId='12' x:Name="headBudgetProjet" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </TextBox.Header>
-            </TextBox>
-
-            <TextBox x:ConnectionId='6' x:Name="tbxNbrEmployeProjet">
-                <TextBox.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">nombre d'employé</TextBlock>
-                        <TextBlock x:ConnectionId='11' x:Name="headNbrEmployeProjet" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </TextBox.Header>
-            </TextBox>
-
-            <DatePicker x:ConnectionId='7' x:Name="tbxSalaireProjet">
-                <DatePicker.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">total des salaires</TextBlock>
-                        <TextBlock x:ConnectionId='10' x:Name="headSalaireProjet" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </DatePicker.Header>
-            </DatePicker>
-
-            <NumberBox x:ConnectionId='8' x:Name="tbxDescriptionProjet" Value="15.25" SpinButtonPlacementMode="Compact" SmallChange=".25" Minimum="15.25" LargeChange="1">
-                <NumberBox.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">Description</TextBlock>
-                        <TextBlock x:ConnectionId='9' x:Name="headDescriptionProjet" Foreground="Red"></TextBlock>
+                        <TextBlock x:ConnectionId='10' x:Name="headDescriptionProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+            
+            <NumberBox x:ConnectionId='6' x:Name="nbxBudgetProjet"
+                        Value="10000"
+                        SpinButtonPlacementMode="Compact"
+                        SmallChange="10"
+                        LargeChange="100">
+                <NumberBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Budget</TextBlock>
+                        <TextBlock x:ConnectionId='9' x:Name="headBudgetProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </NumberBox.Header>
+            </NumberBox>
+
+            <NumberBox x:ConnectionId='7' x:Name="nbxNbEmployeProjet"                        
+                       Value="10000"
+                       SpinButtonPlacementMode="Compact"
+                       SmallChange="1"
+                       LargeChange="1"
+                       Maximum="5"
+                       Minimum="1">
+                <NumberBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Nombre d'employé</TextBlock>
+                        <TextBlock x:ConnectionId='8' x:Name="headNbrEmployeProjet" Foreground="Red"></TextBlock>
                     </StackPanel>
                 </NumberBox.Header>
             </NumberBox>

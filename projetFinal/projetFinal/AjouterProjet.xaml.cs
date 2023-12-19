@@ -24,12 +24,71 @@ namespace projetFinal
         public AjouterProjet()
         {
             this.InitializeComponent();
-            lvClients.ItemsSource = SingletonClient.getInstance().GetListeClient();
+
+
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            
+            string titre, date_debut, description, statut;
+            decimal budget, total_salaire;
+            int nb_employe, client;
+
+
+            titre = tbxTitreProjet.Text;
+            date_debut = tbxDateProjet.SelectedDate.ToString();
+            date_debut = date_debut.Substring(0, date_debut.IndexOf(" "));
+            description = tbxDescriptionProjet.Text;
+            budget = (decimal) nbxBudgetProjet.Value;
+            nb_employe = (int) nbxNbEmployeProjet.Value;
+            client = SingletonProjet.getInstance().getNoClient(autoSuggBoxClient.Text);
+            statut = "En cours";
+
+            SingletonProjet.getInstance().AjoutProjet(titre, date_debut, description, budget, nb_employe, client, statut);
+
         }
+
+        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suitableItems = new List<string>();
+                var splitText = sender.Text.ToLower().Split(" ");
+
+
+                var clients = SingletonClient.getInstance().GetListeClient();
+
+                foreach (var client in clients)
+                {
+
+                    var clientNom = client.Nom;
+
+                    var found = splitText.All((key) =>
+                    {
+                        return clientNom.ToLower().Contains(key);
+                    });
+
+                    if (found)
+                    {
+                        suitableItems.Add(clientNom);
+                    }
+                }
+
+                if (suitableItems.Count == 0)
+                {
+                    suitableItems.Add("No results found");
+                }
+
+                sender.ItemsSource = suitableItems;
+
+            }
+        }
+
+        private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+            //SuggestionOutput.Text = args.SelectedItem.ToString();
+            autoSuggBoxClient.Text = args.SelectedItem.ToString();
+        }
+
     }
 }

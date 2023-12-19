@@ -50,7 +50,6 @@ namespace projetFinal
 
             if (position != -1 && Connexion.Connecter == true)
             {
-                // Assuming ModificationEmploye is a ContentDialog
                 ModificationEmploye dialog = new ModificationEmploye(position);
                 dialog.XamlRoot = gridViewEmployes.XamlRoot;
                 dialog.Title = "Modification d'un employé";

@@ -50,5 +50,13 @@ namespace projetFinal
         {
             this.Frame.Navigate(typeof(Projets));
         }
+
+        private void gridViewProjets_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var item = e.ClickedItem;
+            //int position = gridViewProjets.Items.IndexOf(e);
+
+            this.Frame.Navigate(typeof(ZoomProjet), item);
+        }
     }
 }

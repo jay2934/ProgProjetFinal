@@ -18,15 +18,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <AutoSuggestBox TextChanged="AutoSuggestBox_TextChanged" SuggestionChosen="AutoSuggestBox_SuggestionChosen" AutomationProperties.Name="tbxClientProjet"/>
-            <AutoSuggestBox x:Name="lvClients">
-                <AutoSuggestBox.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">Client</TextBlock>
-                        <TextBlock x:Name="headlvClients" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </AutoSuggestBox.Header>
-            </AutoSuggestBox>
+            <AutoSuggestBox TextChanged="AutoSuggestBox_TextChanged"
+                SuggestionChosen="AutoSuggestBox_SuggestionChosen"
+                Width="300" AutomationProperties.Name="Basic AutoSuggestBox" 
+                Header="Client associé au projet" x:Name="autoSuggBoxClient"/>
 
             <TextBox x:Name="tbxTitreProjet">
                 <TextBox.Header>
@@ -37,6 +32,7 @@
                 </TextBox.Header>
             </TextBox>
 
+
             <DatePicker x:Name="tbxDateProjet">
                 <DatePicker.Header>
                     <StackPanel Orientation="Horizontal">
@@ -46,38 +42,39 @@
                 </DatePicker.Header>
             </DatePicker>
 
-            <TextBox x:Name="tbxBudgetProjet">
+            <TextBox x:Name="tbxDescriptionProjet">
                 <TextBox.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">budget</TextBlock>
-                        <TextBlock x:Name="headBudgetProjet" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </TextBox.Header>
-            </TextBox>
-
-            <TextBox x:Name="tbxNbrEmployeProjet">
-                <TextBox.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">nombre d'employé</TextBlock>
-                        <TextBlock x:Name="headNbrEmployeProjet" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </TextBox.Header>
-            </TextBox>
-
-            <DatePicker x:Name="tbxSalaireProjet">
-                <DatePicker.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Black">total des salaires</TextBlock>
-                        <TextBlock x:Name="headSalaireProjet" Foreground="Red"></TextBlock>
-                    </StackPanel>
-                </DatePicker.Header>
-            </DatePicker>
-
-            <NumberBox x:Name="tbxDescriptionProjet" Value="15.25" SpinButtonPlacementMode="Compact" SmallChange=".25" Minimum="15.25" LargeChange="1">
-                <NumberBox.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">Description</TextBlock>
                         <TextBlock x:Name="headDescriptionProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </TextBox.Header>
+            </TextBox>
+            
+            <NumberBox x:Name="nbxBudgetProjet"
+                        Value="10000"
+                        SpinButtonPlacementMode="Compact"
+                        SmallChange="10"
+                        LargeChange="100">
+                <NumberBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Budget</TextBlock>
+                        <TextBlock x:Name="headBudgetProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </NumberBox.Header>
+            </NumberBox>
+
+            <NumberBox x:Name="nbxNbEmployeProjet"                        
+                       Value="10000"
+                       SpinButtonPlacementMode="Compact"
+                       SmallChange="1"
+                       LargeChange="1"
+                       Maximum="5"
+                       Minimum="1">
+                <NumberBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Nombre d'employé</TextBlock>
+                        <TextBlock x:Name="headNbrEmployeProjet" Foreground="Red"></TextBlock>
                     </StackPanel>
                 </NumberBox.Header>
             </NumberBox>

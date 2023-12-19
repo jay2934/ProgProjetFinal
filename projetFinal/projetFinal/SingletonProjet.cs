@@ -73,7 +73,7 @@ namespace projetFinal
             return liste;
         }
 
-        public void AjoutProjet(string no_projet, string titre, string date_debut, string description, decimal budget, int nb_employe, decimal total_salaire, int client, string statut)
+        public void AjoutProjet(string titre, string date_debut, string description, decimal budget, int nb_employe, int client, string statut)
         {
             try
             {
@@ -81,13 +81,11 @@ namespace projetFinal
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-                commande.Parameters.AddWithValue("no_projet_", no_projet);
                 commande.Parameters.AddWithValue("titre_", titre);
                 commande.Parameters.AddWithValue("date_debut_", date_debut);
                 commande.Parameters.AddWithValue("description_", description);
                 commande.Parameters.AddWithValue("budget_", budget);
                 commande.Parameters.AddWithValue("nb_employe_", nb_employe);
-                commande.Parameters.AddWithValue("total_salaire_", total_salaire);
                 commande.Parameters.AddWithValue("client_", client);
                 commande.Parameters.AddWithValue("statut_", statut);
 
@@ -102,6 +100,39 @@ namespace projetFinal
             {
                 con.Close();
             }
+        }
+
+        public int getNoClient(string nom)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_get_clients");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
+                commande.Parameters.AddWithValue("nom_", nom);
+
+                con.Open();
+
+                MySqlDataReader r = commande.ExecuteReader();
+                r.Read();
+
+                int identifiant = (int)r["identifiant"];
+
+                r.Close();
+                con.Close();
+
+                return identifiant;
+            }
+            catch (MySqlException ex)
+            {
+                con.Close();
+                return -1;
+            }
+        }
+
+        public ProjetClient GetProjet(int position)
+        {
+            return liste[position];
         }
         /*
             public Maison getMaison(int position)

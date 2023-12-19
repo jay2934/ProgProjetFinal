@@ -224,7 +224,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[51];
+            _typeNameTable = new string[52];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -276,8 +276,9 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             _typeNameTable[48] = "Microsoft.UI.Xaml.Window";
             _typeNameTable[49] = "projetFinal.ModificationEmploye";
             _typeNameTable[50] = "projetFinal.Projets";
+            _typeNameTable[51] = "projetFinal.ZoomProjet";
 
-            _typeTable = new global::System.Type[51];
+            _typeTable = new global::System.Type[52];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -329,6 +330,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             _typeTable[48] = typeof(global::Microsoft.UI.Xaml.Window);
             _typeTable[49] = typeof(global::projetFinal.ModificationEmploye);
             _typeTable[50] = typeof(global::projetFinal.Projets);
+            _typeTable[51] = typeof(global::projetFinal.ZoomProjet);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -378,6 +380,7 @@ namespace projetFinal.projetFinal_XamlTypeInfo
         private object Activate_46_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
         private object Activate_47_MainWindow() { return new global::projetFinal.MainWindow(); }
         private object Activate_50_Projets() { return new global::projetFinal.Projets(); }
+        private object Activate_51_ZoomProjet() { return new global::projetFinal.ZoomProjet(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -750,6 +753,13 @@ namespace projetFinal.projetFinal_XamlTypeInfo
             case 50:   //  projetFinal.Projets
                 userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_50_Projets;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 51:   //  projetFinal.ZoomProjet
+                userType = new global::projetFinal.projetFinal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_51_ZoomProjet;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

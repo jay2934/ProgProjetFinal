@@ -1319,3 +1319,13 @@ C:\Users\2280608\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\De
 C:\Users\2280608\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.g.cs
 C:\Users\2280608\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.xaml
 C:\Users\2280608\source\repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.xbf
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.g.i.cs
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.g.cs
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.xaml
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.xbf
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AjouterProjet.xbf
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ZoomProjet.xbf
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ZoomProjet.g.i.cs
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ZoomProjet.g.cs
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ZoomProjet.xaml
+C:\Users\2266983\Source\Repos\ProgProjetFinal\projetFinal\projetFinal\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ZoomProjet.xbf
