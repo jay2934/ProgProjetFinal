@@ -14,11 +14,13 @@ namespace projetFinal
         static SingletonProjet instance = null;
         MySqlConnection con;
         ObservableCollection<ProjetClient> liste;
+        ObservableCollection<Projet> listeproj;
 
         public SingletonProjet()
         {
             con = new MySqlConnection("Server=cours.cegep3r.info;Database=a2023_420325ri_fabeq12;Uid=2266983;Pwd=2266983;");
             liste = new ObservableCollection<ProjetClient>();
+            listeproj = new ObservableCollection<Projet>();
         }
 
         public static SingletonProjet getInstance()
@@ -71,6 +73,44 @@ namespace projetFinal
             }
 
             return liste;
+        }
+
+        public ObservableCollection<Projet> GetListeProj()
+        {
+            listeproj.Clear();
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_afficher_projet");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+                while (r.Read())
+                {
+                    string no_projet = (string)r["no_projet"];
+                    string titre = (string)r["titre"];
+                    string date_debut = Convert.ToString(r["date_debut"]);
+                    string description = (string)r["description"];
+                    decimal budget = (decimal)r["budget"];
+                    int nb_employe = (int)r["nb_employe"];
+                    decimal total_salaire = (decimal)r["total_salaire"];
+                    int client = (int)r["client"];
+                    string statut = (string)r["statut"];
+
+                    Projet projet = new Projet(no_projet, titre, date_debut, description, budget, nb_employe, total_salaire, client, statut);
+
+                    listeproj.Add(projet);
+                }
+
+                r.Close();
+                con.Close();
+            }
+            catch (MySqlException ex)
+            {
+                con.Close();
+            }
+
+            return listeproj;
         }
 
         public void AjoutProjet(string titre, string date_debut, string description, decimal budget, int nb_employe, int client, string statut)

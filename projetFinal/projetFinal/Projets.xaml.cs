@@ -58,5 +58,32 @@ namespace projetFinal
 
             this.Frame.Navigate(typeof(ZoomProjet), item);
         }
+        private async void btnExporterProjet_Click(object sender, RoutedEventArgs e)
+        {
+            var picker = new Windows.Storage.Pickers.FileSavePicker();
+
+            var hWnd = IntPtr.Zero;
+            if(SingletonFenetre.getInstance().Fenetre != null)
+            {
+                hWnd = WinRT.Interop.WindowNative.GetWindowHandle(SingletonFenetre.getInstance().Fenetre);
+                WinRT.Interop.InitializeWithWindow.Initialize(picker, hWnd);
+            }
+
+            picker.SuggestedFileName = "Projet";
+            picker.FileTypeChoices.Add("Fichier texte", new List<string>() { ".csv" });
+
+            //crée le fichier
+            Windows.Storage.StorageFile monFichier = await picker.PickSaveFileAsync();
+
+            List<Client> liste = new List<Client>();
+            liste.Add(new Client { Nom = "Laroche"});
+            liste.Add(new Client { Nom = "Demers"});
+            liste.Add(new Client { Nom = "Lavoie"});
+
+            // La fonction ToString de la classe Client retourne: nom + ";" + prenom
+
+            await Windows.Storage.FileIO.WriteLinesAsync(monFichier, liste.ConvertAll(x => x.ToString()), Windows.Storage.Streams.UnicodeEncoding.Utf8);
+
+        }
     }
 }

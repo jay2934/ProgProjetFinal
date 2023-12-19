@@ -9,18 +9,66 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="gridViewProjets">
-        <StackPanel Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="500" Height="250">
-            <StackPanel Grid.Column="0" HorizontalAlignment="Center">
-                <TextBlock x:Name="tblno_projet" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tbltitre" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tbldate_debut" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tbldescription" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tblbudget" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tblnb_employe" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tbltotal_salaire" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tblclient" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="tblstatut" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
+    <Grid x:Name="gridViewProjets" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="DarkGray" Grid.ColumnSpan="2" BorderBrush="DimGray" BorderThickness="3" Orientation="Horizontal">
+            <StackPanel>
+                <AutoSuggestBox TextChanged="AutoSuggestBox_TextChanged"
+                    SuggestionChosen="AutoSuggestBox_SuggestionChosen"
+                    Width="300" AutomationProperties.Name="Basic AutoSuggestBox" 
+                    x:Name="autoSuggBoxEmploye">
+                    <AutoSuggestBox.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="Black">Employé associé au projet</TextBlock>
+                            <TextBlock x:Name="headEmployeProjet" Foreground="Red"></TextBlock>
+                        </StackPanel>
+                    </AutoSuggestBox.Header>
+                </AutoSuggestBox>
+            </StackPanel>
+            <StackPanel>
+                <NumberBox x:Name="nb_heure" Width="300" Minimum="1" SmallChange="1" LargeChange="5">
+                    <NumberBox.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="Black">Nombre d'heure travaillé</TextBlock>
+                            <TextBlock x:Name="headNbHeureProjet" Foreground="Red"></TextBlock>
+                        </StackPanel>
+                    </NumberBox.Header>
+                </NumberBox>
+            </StackPanel>
+            <Button x:Name="btnAttribueEmploye" Click="btnAttribueEmploye_Click" Content="Attribuer" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5">
+            <TextBlock x:Name="tbltitre" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock x:Name="tblno_projet" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock x:Name="tbldate_debut" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock x:Name="tbldescription" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Budget:</TextBlock>
+                <TextBlock x:Name="tblbudget" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+                <TextBlock FontWeight="SemiBold" FontSize="30">$</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Nombre d'employé:</TextBlock>
+                <TextBlock x:Name="tblnb_employe" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Total des salaires:</TextBlock>
+                <TextBlock x:Name="tbltotal_salaire" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Client:</TextBlock>
+                <TextBlock x:Name="tblclient" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Statut:</TextBlock>
+                <TextBlock x:Name="tblstatut" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
             </StackPanel>
         </StackPanel>
     </Grid>

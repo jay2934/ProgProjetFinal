@@ -9,18 +9,66 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:ConnectionId='2' x:Name="gridViewProjets">
-        <StackPanel Padding="15" Margin="10" Orientation="Vertical" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5" Width="500" Height="250">
-            <StackPanel Grid.Column="0" HorizontalAlignment="Center">
-                <TextBlock x:ConnectionId='3' x:Name="tblno_projet" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='4' x:Name="tbltitre" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='5' x:Name="tbldate_debut" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='6' x:Name="tbldescription" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='7' x:Name="tblbudget" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='8' x:Name="tblnb_employe" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='9' x:Name="tbltotal_salaire" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='10' x:Name="tblclient" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:ConnectionId='11' x:Name="tblstatut" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
+    <Grid x:ConnectionId='2' x:Name="gridViewProjets" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="DarkGray" Grid.ColumnSpan="2" BorderBrush="DimGray" BorderThickness="3" Orientation="Horizontal">
+            <StackPanel>
+                <AutoSuggestBox x:ConnectionId='15'                                         
+                                                                      
+                    Width="300" AutomationProperties.Name="Basic AutoSuggestBox" 
+                    x:Name="autoSuggBoxEmploye">
+                    <AutoSuggestBox.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="Black">Employé associé au projet</TextBlock>
+                            <TextBlock x:ConnectionId='16' x:Name="headEmployeProjet" Foreground="Red"></TextBlock>
+                        </StackPanel>
+                    </AutoSuggestBox.Header>
+                </AutoSuggestBox>
+            </StackPanel>
+            <StackPanel>
+                <NumberBox x:ConnectionId='13' x:Name="nb_heure" Width="300" Minimum="1" SmallChange="1" LargeChange="5">
+                    <NumberBox.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="Black">Nombre d'heure travaillé</TextBlock>
+                            <TextBlock x:ConnectionId='14' x:Name="headNbHeureProjet" Foreground="Red"></TextBlock>
+                        </StackPanel>
+                    </NumberBox.Header>
+                </NumberBox>
+            </StackPanel>
+            <Button x:ConnectionId='12' x:Name="btnAttribueEmploye"                                  Content="Attribuer" Margin="10" Padding="10" CornerRadius="10" FontWeight="Bold" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" BorderBrush="DarkGray" BorderThickness="4" CornerRadius="5">
+            <TextBlock x:ConnectionId='3' x:Name="tbltitre" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock x:ConnectionId='4' x:Name="tblno_projet" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock x:ConnectionId='5' x:Name="tbldate_debut" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock x:ConnectionId='6' x:Name="tbldescription" FontWeight="SemiBold" FontSize="30" TextAlignment="Center" TextWrapping="Wrap"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Budget:</TextBlock>
+                <TextBlock x:ConnectionId='11' x:Name="tblbudget" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+                <TextBlock FontWeight="SemiBold" FontSize="30">$</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Nombre d'employé:</TextBlock>
+                <TextBlock x:ConnectionId='10' x:Name="tblnb_employe" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Total des salaires:</TextBlock>
+                <TextBlock x:ConnectionId='9' x:Name="tbltotal_salaire" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Client:</TextBlock>
+                <TextBlock x:ConnectionId='8' x:Name="tblclient" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" FontSize="30">Statut:</TextBlock>
+                <TextBlock x:ConnectionId='7' x:Name="tblstatut" Margin="5 0 0 0" FontWeight="SemiBold" FontSize="30" HorizontalAlignment="left" TextAlignment="left" TextWrapping="Wrap"/>
             </StackPanel>
         </StackPanel>
     </Grid>

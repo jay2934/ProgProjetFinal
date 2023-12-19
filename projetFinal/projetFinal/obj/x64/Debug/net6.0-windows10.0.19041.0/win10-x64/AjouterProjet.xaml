@@ -21,8 +21,14 @@
             <AutoSuggestBox x:ConnectionId='2'                                         
                                                                   
                 Width="300" AutomationProperties.Name="Basic AutoSuggestBox" 
-                Header="Client associé au projet" x:Name="autoSuggBoxClient"/>
-
+                x:Name="autoSuggBoxClient">
+                <AutoSuggestBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black">Client associé au projet</TextBlock>
+                        <TextBlock x:ConnectionId='13' x:Name="headClientProjet" Foreground="Red"></TextBlock>
+                    </StackPanel>
+                </AutoSuggestBox.Header>
+            </AutoSuggestBox>
             <TextBox x:ConnectionId='3' x:Name="tbxTitreProjet">
                 <TextBox.Header>
                     <StackPanel Orientation="Horizontal">
@@ -54,6 +60,7 @@
             <NumberBox x:ConnectionId='6' x:Name="nbxBudgetProjet"
                         Value="10000"
                         SpinButtonPlacementMode="Compact"
+                        Minimum="0"
                         SmallChange="10"
                         LargeChange="100">
                 <NumberBox.Header>
@@ -65,7 +72,7 @@
             </NumberBox>
 
             <NumberBox x:ConnectionId='7' x:Name="nbxNbEmployeProjet"                        
-                       Value="10000"
+                       Value="5"
                        SpinButtonPlacementMode="Compact"
                        SmallChange="1"
                        LargeChange="1"
